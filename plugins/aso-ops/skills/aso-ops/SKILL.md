@@ -22,7 +22,14 @@ This skill has no access to store consoles and never signs in. It edits the repo
 
 ## Three modes
 
-**audit** — If the live listing is not yet in the repository, capture it first: the repository must reflect what runs before anything is proposed. Some fields can be fetched from public pages; others (keywords, subtitle, promotional text, short description, screenshot captions) exist only in the console — ask the owner to copy them and record which fields were hand-copied and when. An empty changelog means "never audited", not "nothing to do". **Mandatory step: put the same field from both stores side by side** — a language or positioning mismatch between stores is a finding that per-store review never sees. A read-only audit is answered in chat; write the file when the owner wants to keep it.
+**audit** — If the live listing is not yet in the repository, capture it first: the repository must reflect what runs before anything is proposed. Some fields can be fetched from public pages; others (keywords, subtitle, promotional text, short description, screenshot captions) exist only in the console — ask the owner to copy them and record which fields were hand-copied and when. Public sources return only part of a listing — never report a capture as complete when it is not:
+
+| Source | Returns | Does not return |
+| --- | --- | --- |
+| App Store lookup API (`itunes.apple.com/lookup?id=<app id>&country=<cc>`) | title, description, version, rating count, screenshot count, age rating | subtitle, keywords, promotional text, screenshot captions — console only |
+| Google Play listing page (static HTML) | title, full description | short description, rating, download count — rendered by script |
+
+An empty changelog means "never audited", not "nothing to do". **Mandatory step: put the same field from both stores side by side** — a language or positioning mismatch between stores is a finding that per-store review never sees. A read-only audit is answered in chat; write the file when the owner wants to keep it.
 
 **change** — one field at a time. Edit the live file, add the changelog line with its reason and a readout date at least 14 days out, and hand the new text to the owner to paste. Field rules: [field rules](references/field-rules.md).
 

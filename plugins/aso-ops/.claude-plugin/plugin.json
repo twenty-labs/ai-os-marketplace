@@ -1,6 +1,6 @@
 {
   "name": "aso-ops",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Use when auditing, changing or reading the results of an App Store or Google Play listing — title, subtitle, keywords, descriptions, screenshots, preview video, listing experiments, ratings prompts. Keeps the live listing and a changelog in the repository. NOT for paid ads (ads-review) or in-app copy.",
   "author": {
     "name": "Twenty Labs"

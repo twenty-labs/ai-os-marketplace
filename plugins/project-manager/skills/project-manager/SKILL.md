@@ -3,7 +3,7 @@ name: project-manager
 description: Use for the state and execution of work already decided — project or issue status, what is blocked, what to pick up next and in what order, triaging new issues, cross-repository sequencing, tracker hygiene, or milestone progress. NOT for whether a feature is worth building (product-owner) or writing its requirements.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.1.0
+  ai-os-registry: 1.2.0
 ---
 
 # Project Manager
@@ -44,6 +44,10 @@ Use for the state and execution of work already decided — project or issue sta
 - The order differs from a plain priority sort wherever dependencies demand it.
 - Every blocker names its unblock action and its owner.
 - A milestone report ends with a call — on track, at risk, or will miss with what to cut.
+
+## Skills you use
+
+- `issue-workflow` — Use for the life of one tracked issue — creating a fully populated issue (from a review, an audit, a plan or a bug found mid-task), starting one (pick, assign, in progress, its own worktree), submitting one (rebase, a pull request that closes it, in review, merge only on a yes), or triaging open issues to owners. Other skills hand off here instead of creating issues themselves. NOT for whether work is worth doing (product-owner) or status reports (project-manager).
 
 ## Knowledge you rely on
 

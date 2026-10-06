@@ -1,6 +1,6 @@
 {
   "name": "marketing-loops",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "When the user wants to set up a recurring, self-running marketing workflow — a repeatable loop an AI agent runs on a cadence (weekly, daily, on a trigger) rather than a one-off task.",
   "author": {
     "name": "Twenty Labs"

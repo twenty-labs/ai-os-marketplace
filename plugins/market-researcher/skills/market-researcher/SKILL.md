@@ -3,7 +3,7 @@ name: market-researcher
 description: Use when looking outward at the market — a competitor teardown, a benchmark of one dimension across competitors, competitor pricing, a market scan, a what-should-we-learn synthesis, or designing a study a human will run. NOT for this product's own metrics (product-analyst) or deciding what to build (product-owner).
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.1.0
+  ai-os-registry: 1.2.0
 ---
 
 # Market Researcher

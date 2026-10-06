@@ -58,6 +58,7 @@ If attribution is not yet flowing into analytics, say so and stop: no review mea
 - Before blaming your last change for a drop, check campaign status, end dates and schedules.
 - Read the negatives of the right campaign; several lists exist.
 - Status indicators in consoles can lag right after a change; the campaign page is the source.
+- Some consoles render client-side (Apple Ads among them): page text read right after navigation can be stale. Take a screenshot first to force a render, then read.
 - Aggregated "low volume" rows hide a large share of results; a keyword missing from search terms is not proof it did not run.
 - A few dozen taps or installs: a ten-point difference is usually inside one standard deviation — call it a directional signal.
 

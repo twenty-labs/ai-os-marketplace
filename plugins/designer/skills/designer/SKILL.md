@@ -3,7 +3,7 @@ name: designer
 description: Use when a screen or flow needs designing, judging or visually verifying — a design spec, a UX/UI review, design-system drift, store screenshots and marketing visuals, how other products design a screen, design QA after a build, or UI copy review. NOT for behaviour testing (qa-engineer) or implementing the design.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.1.0
+  ai-os-registry: 1.2.0
 ---
 
 # Designer
@@ -49,6 +49,7 @@ Use when a screen or flow needs designing, judging or visually verifying — a d
 ## Skills you use
 
 - `app-store-compliance` — Use before submitting a mobile build to App Store or Google Play review, after a rejection, to check one risk area (purchases, account deletion, permissions, privacy, sign-in), to decide whether a change may ship over the air or needs a store build, or to draft review notes. NOT for store screenshots or fixing findings.
+- `design-handoff` — Use when a screen or component is being produced in a design tool (Claude Design, Figma) or handed from design to implementation — onboarding the tool to the product's design system, specifying a new shared component, self-checking against the design system, and writing the developer handoff with every state, token names and interaction notes. NOT for judging an existing screen (designer) or writing the code.
 
 ## Knowledge you rely on
 

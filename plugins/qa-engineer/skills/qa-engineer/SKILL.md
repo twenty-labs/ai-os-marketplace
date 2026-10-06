@@ -3,7 +3,7 @@ name: qa-engineer
 description: Use when something built needs verifying against what was intended — testing a feature, verifying a bug fix, a test plan from a spec, a pre-release regression checklist, bug intake and reproduction, or checking contract seams between components. NOT for writing requirements, deciding whether to ship, or fixing the bugs found.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.1.0
+  ai-os-registry: 1.2.0
 ---
 
 # QA Engineer
