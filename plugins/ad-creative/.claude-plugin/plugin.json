@@ -1,0 +1,16 @@
+{
+  "name": "ad-creative",
+  "version": "1.1.0",
+  "description": "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "paid-acquisition",
+    "copywriting"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/coreyhaines31/marketingskills/tree/dda3841f0b294e01e93b1541486beefbfab0915e/skills/ad-creative"
+}

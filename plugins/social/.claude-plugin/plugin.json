@@ -1,0 +1,15 @@
+{
+  "name": "social",
+  "version": "1.1.0",
+  "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, or Facebook, or wants to do social listening and engagement triage.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "content-marketing"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/coreyhaines31/marketingskills/tree/dda3841f0b294e01e93b1541486beefbfab0915e/skills/social"
+}

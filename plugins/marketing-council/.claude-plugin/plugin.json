@@ -1,0 +1,15 @@
+{
+  "name": "marketing-council",
+  "version": "1.1.0",
+  "description": "When the user wants multiple expert perspectives on a marketing question — a simulated board of advisors staffed by legendary marketers (Seth Godin, David Ogilvy, Eugene Schwartz, April Dunford, Rory Sutherland, Alex Hormozi, Byron Sharp, and more).",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "marketing-strategy"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/coreyhaines31/marketingskills/tree/dda3841f0b294e01e93b1541486beefbfab0915e/skills/marketing-council"
+}

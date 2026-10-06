@@ -1,0 +1,15 @@
+{
+  "name": "lifecycle-campaign",
+  "version": "1.1.0",
+  "description": "Use when designing, launching or reading a lifecycle campaign — push, email, in-app message, personal offer, discount code, gift or win-back — as cohort, moment, message, kill switch and holdout measurement. NOT for paid ads or messages the product already sends by default.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "lifecycle-marketing",
+    "email-marketing",
+    "experimentation"
+  ]
+}

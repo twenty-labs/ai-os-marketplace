@@ -1,0 +1,14 @@
+{
+  "name": "events",
+  "version": "1.1.0",
+  "description": "When the user wants to plan, run, sponsor, speak at, or get pipeline from events — webinars, conferences, trade shows, meetups, dinners, workshops, virtual summits, or user conferences.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/coreyhaines31/marketingskills/tree/dda3841f0b294e01e93b1541486beefbfab0915e/skills/events"
+}

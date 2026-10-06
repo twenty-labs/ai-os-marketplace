@@ -1,0 +1,15 @@
+{
+  "name": "designer",
+  "version": "1.1.0",
+  "description": "Use when a screen or flow needs designing, judging or visually verifying — a design spec, a UX/UI review, design-system drift, store screenshots and marketing visuals, how other products design a screen, design QA after a build, or UI copy review. NOT for behaviour testing (qa-engineer) or implementing the design.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "role",
+    "ux-design",
+    "visual-design",
+    "ux-writing"
+  ]
+}

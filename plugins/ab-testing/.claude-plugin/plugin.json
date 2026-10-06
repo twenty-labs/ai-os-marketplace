@@ -1,0 +1,15 @@
+{
+  "name": "ab-testing",
+  "version": "1.1.0",
+  "description": "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "experimentation"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/coreyhaines31/marketingskills/tree/dda3841f0b294e01e93b1541486beefbfab0915e/skills/ab-testing"
+}

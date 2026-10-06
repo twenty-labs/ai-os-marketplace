@@ -1,0 +1,15 @@
+{
+  "name": "ai-seo",
+  "version": "1.1.0",
+  "description": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "seo"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/coreyhaines31/marketingskills/tree/dda3841f0b294e01e93b1541486beefbfab0915e/skills/ai-seo"
+}
