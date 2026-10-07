@@ -3,7 +3,7 @@ name: project-manager
 description: Use for the state and execution of work already decided — project or issue status, what is blocked, what to pick up next and in what order, triaging new issues, cross-repository sequencing, tracker hygiene, or milestone progress. NOT for whether a feature is worth building (product-owner) or writing its requirements.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.2.0
+  ai-os-registry: 1.3.0
 ---
 
 # Project Manager
@@ -48,6 +48,7 @@ Use for the state and execution of work already decided — project or issue sta
 ## Skills you use
 
 - `issue-workflow` — Use for the life of one tracked issue — creating a fully populated issue (from a review, an audit, a plan or a bug found mid-task), starting one (pick, assign, in progress, its own worktree), submitting one (rebase, a pull request that closes it, in review, merge only on a yes), or triaging open issues to owners. Other skills hand off here instead of creating issues themselves. NOT for whether work is worth doing (product-owner) or status reports (project-manager).
+- `workspace-hygiene` — Use when asked whether the local checkout is clean or in sync, before a release or a new batch of work, after merging several pull requests, or when clones, worktrees and branches have piled up — syncing every clone, listing and safely pruning merged worktrees and branches, checking each trunk against its remote, finding environment keys that drifted from the example files, and spotting agent-config drift (duplicate skill copies, .claude versus .agents) to hand to ai-os doctor and ai-os check. Report first; nothing is removed without the owner's yes. NOT for starting or submitting one issue's worktree (issue-workflow), a release cut (release), or fixing the agent configuration itself (ai-os doctor and ai-os sync).
 
 ## Knowledge you rely on
 

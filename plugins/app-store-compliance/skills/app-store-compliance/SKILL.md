@@ -33,7 +33,7 @@ Guidelines change. When you can reach the official App Store Review Guidelines a
 
 1. **Identify the core**: the product's primary purpose, its top three flows, and what using it requires (account, permissions, purchase).
 2. **Top rejection risks first** — missing or vague permission purpose strings; undisclosed data collection or tracking; purchase flows without restore or with unclear terms; digital goods sold outside the store's billing; a login wall with no explanation or reviewer path; third-party sign-in without the platform's required alternative; account creation without in-app deletion; claims needing substantiation; placeholder screens and dead ends.
-3. **Systematic checklist** — [review checklist](references/review-checklist.md), covering both stores.
+3. **Systematic checklist** — [review checklist](references/review-checklist.md), covering both stores. For an app aimed at children or with an age gate, add [kids and age](references/kids-and-age.md).
 4. **Reviewer friction** — demo account or demo mode, review notes, first-run clarity, states that make the app look broken.
 
 ## Report shape

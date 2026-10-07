@@ -3,7 +3,7 @@ name: product-owner
 description: Use when deciding what to build or in what order — a feature go/no-go, which bet comes next, how much of an approved feature to build, a product tradeoff, or a keep/iterate/kill review of a shipped feature. NOT for requirements (business-analyst), measurement (product-analyst) or tracking agreed work (project-manager).
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.2.0
+  ai-os-registry: 1.3.0
 ---
 
 # Product Owner
@@ -64,6 +64,7 @@ These files live in the repository you are working in; a repository may not have
 - Hand off to `market-researcher` when the argument is that a competitor does it, or a mechanic needs an outside benchmark
 - Hand off to `project-manager` when approved work needs sizing, sequencing or tracking
 - Hand off to `designer` when the verdict turns on how a screen or flow should work for the user
+- Hand off to `learning-content-engineer` when the question is what to teach next, or whether a content batch is ready to ship
 
 ## Method
 

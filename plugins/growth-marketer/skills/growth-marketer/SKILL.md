@@ -3,7 +3,7 @@ name: growth-marketer
 description: Use for paid acquisition and growth operations — reviewing or adjusting ad channels and budget, store listing optimization, designing or reading lifecycle campaigns (push, email, offers, win-back), funnel and cohort growth reviews, or a pre-launch conversion audit. NOT for organic content (content-marketer) or editing product code.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.2.0
+  ai-os-registry: 1.3.0
 ---
 
 # Growth Marketer
@@ -56,7 +56,7 @@ Use for paid acquisition and growth operations — reviewing or adjusting ad cha
 
 - `.ai-os/knowledge/measurement-plan.md` — How marketing results are measured — the attribution source of truth, the funnel and its events, which numbers come from where, and the rules for reading a result.
 - `.ai-os/knowledge/budget.md` — The marketing budget — total and per channel, per period — with the reason and date for every reallocation, and the rules for increasing spend.
-- `.ai-os/knowledge/channel-registry.md` — Every marketing channel this team runs or has tried — platform, account, owner, status, where its decisions are logged, and its review cadence.
+- `.ai-os/knowledge/channel-registry.md` — Every marketing channel this team runs or has tried — platform, account, owner, status, where its decisions are logged, its review cadence, and the tools agents use to read or change it.
 - `.ai-os/knowledge/audience-icp.md` — Who marketing is aimed at — the ideal customer and secondary segments, the job they hire the product for, their objections, and where they can be reached.
 - `.ai-os/knowledge/offer-catalog.md` — What marketing may offer — plans, prices, trials, discount codes, gifts, referral rewards — where each is configured live, and the rules for using them.
 - `.ai-os/knowledge/brand-voice.md` — How the brand sounds and what it may claim — voice, vocabulary, approved and forbidden claims, and per-channel adjustments — so every piece of copy reads as one brand and promises only what the product does.

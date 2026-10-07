@@ -28,12 +28,25 @@ Keep three to five angles, each tied to a feature the current release really has
 1. **ideas** — new hooks into the hook bank, each on one angle. A hook states an outcome or a mistake in the first seconds and does not lead with the product name.
 2. **script** — choose a few; write short scripts: hook, one idea, the real product on screen, one call to action. Caption in the project's locale, a handful of relevant tags.
 3. **link** — every script gets its own tracking link (deferred deep link or UTM-tagged link with a campaign parameter equal to the slug), placed where the platform allows (bio, pinned comment, description). Never link straight to the store or homepage: the result lands in "organic" and teaches nothing.
-4. **queue** — add to `queue.md` at a fixed, sustainable cadence. If a scheduler exists, the queue is its input; its dry run is reviewed before anything publishes.
+4. **queue** — add to `queue.md` at a fixed, sustainable cadence. If the project has a scheduler tool, the queue is its input and publishing follows [scheduled publishing](#scheduled-publishing).
 5. **review** — weekly: views, early retention, link clicks, signups or installs per campaign parameter. Record results in the hook bank. A hook at two times the median or more earns two variants; one under half the median retires its angle for a month.
+
+## Scheduled publishing
+
+Only when the project has a scheduler tool (named in the channel registry's Tooling section). The scheduler is the only thing that talks to the platform; never write a new posting script.
+
+1. **Coverage check** — how many days of the queue are booked and which slots are empty. Past slots cannot be backfilled; say so. If coverage is enough and nothing new was asked for, report it and stop.
+2. **Tool doctor** — the scheduler's health check. Settle every row it flags before scheduling more: media that may already be published (confirm on the platform, then mark the row published with the real post id — never schedule it again, that double-posts), stuck errors, slots in the past.
+3. **`plan` dry run** — every row reads ready at a time, or carries a reason you accept. Nothing is sent.
+4. **Owner approves** the plan output post by post: media, caption, link and time. Approving a batch is not approving its posts.
+5. **Schedule** — one post per slot, inside the platform's scheduling window and quota limits.
+6. **Verify on the platform** — read each post back from the platform (the tool's verify step or its API); a returned post id is not proof. Re-run the coverage check and update `queue.md`.
+
+Report how many posts were scheduled and for when, coverage now, what the doctor flagged and what you did about it, and what is still outstanding.
 
 ## Rules
 
 - At least one piece per week sells nothing — a tip that stands on its own.
 - "What is this?" comments are buying signals: answer with the tracked link and note them in the review.
-- Never publish on the owner's behalf until a scheduler exists and the owner approves each piece.
+- Never publish on the owner's behalf without a scheduler tool and the owner's approval of each post. Without one, hand the finished piece to the owner.
 - Results are reported down to signups or installs, never views alone.

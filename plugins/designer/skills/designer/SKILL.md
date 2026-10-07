@@ -3,7 +3,7 @@ name: designer
 description: Use when a screen or flow needs designing, judging or visually verifying — a design spec, a UX/UI review, design-system drift, store screenshots and marketing visuals, how other products design a screen, design QA after a build, or UI copy review. NOT for behaviour testing (qa-engineer) or implementing the design.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.2.0
+  ai-os-registry: 1.3.0
 ---
 
 # Designer
@@ -50,6 +50,7 @@ Use when a screen or flow needs designing, judging or visually verifying — a d
 
 - `app-store-compliance` — Use before submitting a mobile build to App Store or Google Play review, after a rejection, to check one risk area (purchases, account deletion, permissions, privacy, sign-in), to decide whether a change may ship over the air or needs a store build, or to draft review notes. NOT for store screenshots or fixing findings.
 - `design-handoff` — Use when a screen or component is being produced in a design tool (Claude Design, Figma) or handed from design to implementation — onboarding the tool to the product's design system, specifying a new shared component, self-checking against the design system, and writing the developer handoff with every state, token names and interaction notes. NOT for judging an existing screen (designer) or writing the code.
+- `asset-generation` — Use when a product or its learning content needs images, illustrations, icons, or text-to-speech and voice audio made with AI generation tools — matching the established style anchor, checking what already exists, estimating cost and dry-running before any paid batch, generating a small slice first, choosing the quality setting and voice, keeping a provenance ledger, regenerating only what changed, reviewing every asset before it ships, and voice, likeness, licensing and child-safety rules. NOT for marketing or ad creatives (image, ad-creative), design tokens and UI specs (design-handoff), or validating the learning content itself (content-pack-qa).
 
 ## Knowledge you rely on
 
@@ -66,6 +67,7 @@ These files live in the repository you are working in; a repository may not have
 - Hand off to `product-analyst` when a design choice needs completion or drop-off data
 - Hand off to `qa-engineer` when a review turns up a behaviour bug rather than a visual one
 - Hand off to `market-researcher` when a pattern question widens into a competitor or market question
+- Hand off to `mobile-engineer` when a spec is ready for implementation, or a built screen needs fixing after design QA
 
 ## Method
 

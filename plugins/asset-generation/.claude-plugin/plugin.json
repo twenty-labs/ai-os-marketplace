@@ -1,0 +1,13 @@
+{
+  "name": "asset-generation",
+  "version": "1.3.0",
+  "description": "Use when a product or its learning content needs images, illustrations, icons, or text-to-speech and voice audio made with AI generation tools — matching the established style anchor, checking what already exists, estimating cost and dry-running before any paid batch, generating a small slice first, choosing the quality setting and voice, keeping a provenance ledger, regenerating only what changed, reviewing every asset before it ships, and voice, likeness, licensing and child-safety rules. NOT for marketing or ad creatives (image, ad-creative), design tokens and UI specs (design-handoff), or validating the learning content itself (content-pack-qa).",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "asset-generation"
+  ]
+}

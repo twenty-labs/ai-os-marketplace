@@ -38,6 +38,9 @@ Check what applies; report only applicable findings. Locate each item at the pat
 - Age rating answers match the actual content.
 - Messaging features (push, live activities, notifications) are not used for unsolicited promotion without consent and an off switch — judged from the actual triggers, content and destinations, never from API use alone.
 
+## Kids and age
+- If the app is in the Kids Category or Families program, is designed for children, or admits users under the digital-consent age: work through [kids and age](kids-and-age.md) — parental gate, ads and analytics, data minimization, voice recordings, age gate, store declarations.
+
 ## Technical quality
 - No crash on launch or on the main paths; network errors and offline states are handled.
 - No placeholder screens, dead ends or "coming soon" features in the build under review.

@@ -1,0 +1,14 @@
+{
+  "name": "analytics-instrumentation",
+  "version": "1.3.0",
+  "description": "Use when feature work must emit product analytics — registering events and properties before code sends them, naming them, choosing client or server emission, person versus event properties, keeping personal data and minors out, adding a funnel step, coverage tests that fail on unregistered or unemitted events, renaming or retiring an event, or checking after release that a shipped event actually arrives. NOT for answering metric questions, readouts or metric specs (product-analyst), marketing attribution setup, or choosing an analytics vendor.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "analytics-instrumentation",
+    "product-analytics"
+  ]
+}

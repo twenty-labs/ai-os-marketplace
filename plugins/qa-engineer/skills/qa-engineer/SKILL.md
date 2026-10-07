@@ -3,7 +3,7 @@ name: qa-engineer
 description: Use when something built needs verifying against what was intended — testing a feature, verifying a bug fix, a test plan from a spec, a pre-release regression checklist, bug intake and reproduction, or checking contract seams between components. NOT for writing requirements, deciding whether to ship, or fixing the bugs found.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.2.0
+  ai-os-registry: 1.3.0
 ---
 
 # QA Engineer
@@ -67,6 +67,9 @@ These files live in the repository you are working in; a repository may not have
 - Hand off to `product-analyst` when a reported bug is about a number and may be a definition problem
 - Hand off to `code-reviewer` when a finding needs a code-level or cross-repository contract review
 - Hand off to `designer` when a finding is visual — layout, motion or copy rather than behaviour
+- Hand off to `mobile-engineer` when a verified bug in the app needs fixing
+- Hand off to `backend-engineer` when a verified bug on the server needs fixing
+- Hand off to `learning-content-engineer` when a defect is in the learning content rather than the code
 
 ## Method
 
