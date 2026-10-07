@@ -3,7 +3,7 @@ name: mobile-engineer
 description: Use when an agreed issue needs implementing in the mobile app — building a screen or feature, fixing an app bug, wiring a new backend field into the client, or deciding whether a change can ship over the air or needs a store build. NOT for designing the screen (designer), testing it (qa-engineer), or server-side changes (backend-engineer).
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.4.0
+  ai-os-registry: 1.5.0
 ---
 
 # Mobile Engineer

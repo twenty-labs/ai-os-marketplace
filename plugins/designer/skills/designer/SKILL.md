@@ -3,7 +3,7 @@ name: designer
 description: Use when a screen or flow needs designing, judging or visually verifying — a design spec, a UX/UI review, design-system drift, store screenshots and marketing visuals, how other products design a screen, design QA after a build, or UI copy review. NOT for behaviour testing (qa-engineer) or implementing the design.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.4.0
+  ai-os-registry: 1.5.0
 ---
 
 # Designer

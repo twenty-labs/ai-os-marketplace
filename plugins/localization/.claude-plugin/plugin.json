@@ -1,6 +1,6 @@
 {
   "name": "localization",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Use when user-facing text must work in more than one language — adding or changing copy in the localization files, keeping every locale in key parity and the generated code regenerated, translating codes from layers with no UI context at the point of display, plurals and interpolation, text expansion and scripts that need fonts, server-resolved localized fields, adding a new locale, auditing for hard-coded strings, or, in a language-learning product, separating the taught language from the learner's-language scaffold. NOT for store listings or marketing copy (aso-ops, copywriting), choosing the wording itself (designer), or authoring learning content (content-pack-qa).",
   "author": {
     "name": "Twenty Labs"

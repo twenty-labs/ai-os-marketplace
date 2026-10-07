@@ -3,7 +3,7 @@ name: learning-content-engineer
 description: Use when curriculum content is the work — authoring or generating lessons, vocabulary, exercises, missions, placement tests or their audio and images; validating or reviewing a content batch; fixing a content bug a learner reported; importing or backfilling content into the live product; or extending the content schema or level map. NOT for deciding what to teach (product-owner), app or player code (mobile-engineer, backend-engineer), or interface copy (designer).
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.4.0
+  ai-os-registry: 1.5.0
 ---
 
 # Learning Content Engineer

@@ -3,7 +3,7 @@ name: content-marketer
 description: Use for organic content and copy — hooks, scripts and the publishing queue for short video and social, marketing copy for pages, emails and listings, and partner or community outreach messages. NOT for paid channel changes or budget (growth-marketer) or editing product code.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.4.0
+  ai-os-registry: 1.5.0
 ---
 
 # Content Marketer

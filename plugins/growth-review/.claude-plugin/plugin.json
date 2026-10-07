@@ -1,6 +1,6 @@
 {
   "name": "growth-review",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Use when the product has real users and the question is why they drop off, do not activate, do not pay or churn — reading funnels, cohorts, retention and session replays, or checking unit economics before spending more. NOT when there is no data yet (conversion-audit) or for ad platform decisions (ads-review).",
   "author": {
     "name": "Twenty Labs"

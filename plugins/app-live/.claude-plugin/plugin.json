@@ -1,6 +1,6 @@
 {
   "name": "app-live",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Use when a store build has been approved, released or rolled out and what tracks the live version must catch up — the release record, the release tag, the branch that mirrors what users run, the in-app update gate — or to check whether the live store build and those records agree. Runs after release, often days later. NOT for cutting or uploading the build (release).",
   "author": {
     "name": "Twenty Labs"
