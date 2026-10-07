@@ -3,7 +3,7 @@ name: project-manager
 description: Use for the state and execution of work already decided — project or issue status, what is blocked, what to pick up next and in what order, triaging new issues, cross-repository sequencing, tracker hygiene, or milestone progress. NOT for whether a feature is worth building (product-owner) or writing its requirements.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.3.0
+  ai-os-registry: 1.4.0
 ---
 
 # Project Manager

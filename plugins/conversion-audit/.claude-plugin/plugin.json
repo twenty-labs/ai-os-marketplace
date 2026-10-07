@@ -1,6 +1,6 @@
 {
   "name": "conversion-audit",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Use when auditing why a product does not convert — users not activating or paying, what to limit or gate, when the paywall should fire, which bugs cost money — or walking the journey before launch or ads. Produces a ranked, read-only diagnosis with one decided fix. NOT for a single metric question or building the fix.",
   "author": {
     "name": "Twenty Labs"

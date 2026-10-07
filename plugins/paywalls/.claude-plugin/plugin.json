@@ -1,6 +1,6 @@
 {
   "name": "paywalls",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates.",
   "author": {
     "name": "Twenty Labs"

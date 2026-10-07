@@ -48,7 +48,7 @@ If attribution is not yet flowing into analytics, say so and stop: no review mea
 
 ## Platform APIs
 
-When a channel has an API tool (recorded in the channel registry's Tooling section), use it rather than the browser: the numbers come back exact and repeatable, and every change becomes a file someone can review.
+When a channel has an API tool (recorded in the channel registry's Tooling section), use it rather than the browser: the numbers come back exact and repeatable, and every change becomes a file someone can review. The Twenty Labs tools are `gads` (Google Ads) and `asa` (Apple Ads, on top of `asc`); `ai-os list tools` shows the versions this project expects and `ai-os doctor` says what is missing.
 
 **Reading.** Pull numbers through a CLI that the tool itself forces into read-only mode, for example a Google Ads CLI run with its `--read-only` flag or environment switch, or the App Store Connect CLI `asc` with `ASC_READ_ONLY=1` for Apple Ads. The wrapper or command sets the switch, not whoever happens to call it, and the CLI refuses writes before they leave the machine. Prefer a read-only API credential for pulls. When the only credential can write, the tool's read-only mode is the only guard, so never run write-capable commands by hand with that credential. The first time you use a tool, check one report against the console and record that the two matched.
 

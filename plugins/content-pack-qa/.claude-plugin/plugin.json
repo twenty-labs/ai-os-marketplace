@@ -1,6 +1,6 @@
 {
   "name": "content-pack-qa",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Use when a batch of learning content — lessons, vocabulary, exercises, missions, placement tests, dialogue, audio or images — must be checked, fixed or shipped: deterministic validation, pedagogical and linguistic review, the fix loop, dry runs before paid synthesis or generation, and importing or backfilling into the live product with verification afterwards. NOT for deciding what to teach (product-owner), testing app behaviour (qa-engineer), or translating interface strings (localization).",
   "author": {
     "name": "Twenty Labs"

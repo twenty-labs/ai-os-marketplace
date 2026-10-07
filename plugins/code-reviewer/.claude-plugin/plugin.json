@@ -1,6 +1,6 @@
 {
   "name": "code-reviewer",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Use before opening a pull request, or on any diff, to review it for correctness bugs, security exposure and cross-repository contracts it leaves half-done — or for a tech-lead review of someone's pull request that verifies its claims, posts the review and files what falls outside it. NOT for style or formatting nits, implementing fixes, or product decisions.",
   "author": {
     "name": "Twenty Labs"

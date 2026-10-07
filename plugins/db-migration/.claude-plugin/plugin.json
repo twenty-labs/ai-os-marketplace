@@ -1,6 +1,6 @@
 {
   "name": "db-migration",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Use when a change needs a database schema migration or a data backfill — designing it (expand/contract), writing it re-runnable, reviewing one for locks and data loss, sequencing it with the code deploy, applying it, verifying it landed — or when a migration failed, the migration history is wedged or drifted, or someone asks where a migration stands. NOT for read-only data questions (product-analyst), seed or content data with its own pipeline, or deciding what the feature should be (product-owner).",
   "author": {
     "name": "Twenty Labs"
