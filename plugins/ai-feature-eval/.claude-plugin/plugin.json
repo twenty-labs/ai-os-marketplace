@@ -1,6 +1,6 @@
 {
   "name": "ai-feature-eval",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Use when building, changing or questioning a feature built on a paid AI provider — LLM calls, speech recognition, pronunciation or speech scoring, text-to-speech, realtime voice: recording what each call costs, unit economics per active user, spend caps per user and globally, measuring quality on a held-out corpus (precision, recall, false-alarm rate), changing a prompt or model safely, probing a provider's real responses, latency and fallbacks, logging without personal data, or investigating one bad turn or session. NOT for product analytics events (analytics-instrumentation), pricing the product to users (pricing), a security review of the paid routes (security-review), or deciding whether the feature should exist (product-owner).",
   "author": {
     "name": "Twenty Labs"

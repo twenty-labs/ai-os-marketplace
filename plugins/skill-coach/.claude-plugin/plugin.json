@@ -1,0 +1,13 @@
+{
+  "name": "skill-coach",
+  "version": "1.6.0",
+  "description": "Use when an agent skill or role got something wrong and the lesson should stick — it quoted a stale fact, used a wrong method, skipped its own rule, or routed badly — and the owner wants it fixed so it does not recur (\"this skill is wrong\", \"update the skill\", \"learn from this\", \"don't do that again\"), or when a work session surfaced a fact a knowledge file should carry. Classifies the failure, fixes it at the right layer (project knowledge, a project skill, or the shared registry upstream) with the smallest change, and logs the lesson. NOT for writing a brand-new skill, a one-off mistake that will not recur, or fixing the product work the skill was doing.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "skill-maintenance"
+  ]
+}

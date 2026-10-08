@@ -1,6 +1,6 @@
 {
   "name": "workspace-hygiene",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Use when asked whether the local checkout is clean or in sync, before a release or a new batch of work, after merging several pull requests, or when clones, worktrees and branches have piled up — syncing every clone, listing and safely pruning merged worktrees and branches, checking each trunk against its remote, finding environment keys that drifted from the example files, and spotting agent-config drift (duplicate skill copies, .claude versus .agents) to hand to ai-os doctor and ai-os check. Report first; nothing is removed without the owner's yes. NOT for starting or submitting one issue's worktree (issue-workflow), a release cut (release), or fixing the agent configuration itself (ai-os doctor and ai-os sync).",
   "author": {
     "name": "Twenty Labs"

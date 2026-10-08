@@ -4,596 +4,603 @@
     "name": "Twenty Labs"
   },
   "metadata": {
-    "description": "Twenty Labs AI OS roles and skills (registry 1.5.1)",
-    "version": "1.5.1"
+    "description": "Twenty Labs AI OS roles and skills (registry 1.6.0)",
+    "version": "1.6.0"
   },
   "plugins": [
     {
       "name": "ab-testing",
       "source": "./plugins/ab-testing",
       "description": "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "ad-creative",
       "source": "./plugins/ad-creative",
       "description": "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "ads",
       "source": "./plugins/ads",
       "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "ads-review",
       "source": "./plugins/ads-review",
       "description": "Use when reviewing or adjusting paid ad channels — whether spend is working, optimizing a channel's keywords, bids, audiences or creatives, reconciling platform numbers with attribution, or moving budget between channels. Changes are proposed first and applied only after approval. NOT for organic content or store listings.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "ai-feature-eval",
       "source": "./plugins/ai-feature-eval",
       "description": "Use when building, changing or questioning a feature built on a paid AI provider — LLM calls, speech recognition, pronunciation or speech scoring, text-to-speech, realtime voice: recording what each call costs, unit economics per active user, spend caps per user and globally, measuring quality on a held-out corpus (precision, recall, false-alarm rate), changing a prompt or model safely, probing a provider's real responses, latency and fallbacks, logging without personal data, or investigating one bad turn or session. NOT for product analytics events (analytics-instrumentation), pricing the product to users (pricing), a security review of the paid routes (security-review), or deciding whether the feature should exist (product-owner).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "ai-seo",
       "source": "./plugins/ai-seo",
       "description": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "analytics",
       "source": "./plugins/analytics",
       "description": "When the user wants to set up, improve, or audit analytics tracking and measurement.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "analytics-instrumentation",
       "source": "./plugins/analytics-instrumentation",
       "description": "Use when feature work must emit product analytics — registering events and properties before code sends them, naming them, choosing client or server emission, person versus event properties, keeping personal data and minors out, adding a funnel step, coverage tests that fail on unregistered or unemitted events, renaming or retiring an event, or checking after release that a shipped event actually arrives. NOT for answering metric questions, readouts or metric specs (product-analyst), marketing attribution setup, or choosing an analytics vendor.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "app-live",
       "source": "./plugins/app-live",
       "description": "Use when a store build has been approved, released or rolled out and what tracks the live version must catch up — the release record, the release tag, the branch that mirrors what users run, the in-app update gate — or to check whether the live store build and those records agree. Runs after release, often days later. NOT for cutting or uploading the build (release).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "app-store-compliance",
       "source": "./plugins/app-store-compliance",
       "description": "Use before submitting a mobile build to App Store or Google Play review, after a rejection, to check one risk area (purchases, account deletion, permissions, privacy, sign-in), to decide whether a change may ship over the air or needs a store build, or to draft review notes. NOT for store screenshots or fixing findings.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "aso",
       "source": "./plugins/aso",
       "description": "When the user wants to audit or optimize an App Store or Google Play listing.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "aso-ops",
       "source": "./plugins/aso-ops",
       "description": "Use when auditing, changing or reading the results of an App Store or Google Play listing — title, subtitle, keywords, descriptions, screenshots, preview video, listing experiments, ratings prompts. Keeps the live listing and a changelog in the repository. NOT for paid ads (ads-review) or in-app copy.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "asset-generation",
       "source": "./plugins/asset-generation",
       "description": "Use when a product or its learning content needs images, illustrations, icons, or text-to-speech and voice audio made with AI generation tools — matching the established style anchor, checking what already exists, estimating cost and dry-running before any paid batch, generating a small slice first, choosing the quality setting and voice, keeping a provenance ledger, regenerating only what changed, reviewing every asset before it ships, and voice, likeness, licensing and child-safety rules. NOT for marketing or ad creatives (image, ad-creative), design tokens and UI specs (design-handoff), or validating the learning content itself (content-pack-qa).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "attribution",
       "source": "./plugins/attribution",
       "description": "When the user wants to figure out which marketing actually drives conversions and revenue, choose or interpret an attribution model, or reconcile conflicting numbers across tools.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "backend-engineer",
       "source": "./plugins/backend-engineer",
       "description": "Use when an agreed issue needs implementing on the server — an endpoint or response field, a schema change, a background job or webhook, a data or content script, or an integration with a paid upstream API. NOT for client-side changes (mobile-engineer), reviewing someone else's diff (code-reviewer), or writing requirements (business-analyst).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "business-analyst",
       "source": "./plugins/business-analyst",
       "description": "Use when a goal or problem needs precise requirements before anyone builds — clarifying a fuzzy ask, mapping how a flow works today, writing user stories, acceptance criteria and business rules, gap analysis, or cross-repository impact. NOT for deciding what to build (product-owner), measuring (product-analyst) or implementing.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "churn-prevention",
       "source": "./plugins/churn-prevention",
       "description": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "co-marketing",
       "source": "./plugins/co-marketing",
       "description": "When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "code-reviewer",
       "source": "./plugins/code-reviewer",
       "description": "Use before opening a pull request, or on any diff, to review it for correctness bugs, security exposure and cross-repository contracts it leaves half-done — or for a tech-lead review of someone's pull request that verifies its claims, posts the review and files what falls outside it. NOT for style or formatting nits, implementing fixes, or product decisions.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "cold-email",
       "source": "./plugins/cold-email",
       "description": "Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "community-marketing",
       "source": "./plugins/community-marketing",
       "description": "Build and leverage online communities to drive product growth and brand loyalty.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "competitor-profiling",
       "source": "./plugins/competitor-profiling",
       "description": "When the user wants to research, profile, or analyze competitors from their URLs.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "competitors",
       "source": "./plugins/competitors",
       "description": "When the user wants to create competitor comparison or alternative pages for SEO and buyer-facing use.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "content-marketer",
       "source": "./plugins/content-marketer",
       "description": "Use for organic content and copy — hooks, scripts and the publishing queue for short video and social, marketing copy for pages, emails and listings, and partner or community outreach messages. NOT for paid channel changes or budget (growth-marketer) or editing product code.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "content-pack-qa",
       "source": "./plugins/content-pack-qa",
       "description": "Use when a batch of learning content — lessons, vocabulary, exercises, missions, placement tests, dialogue, audio or images — must be checked, fixed or shipped: deterministic validation, pedagogical and linguistic review, the fix loop, dry runs before paid synthesis or generation, and importing or backfilling into the live product with verification afterwards. NOT for deciding what to teach (product-owner), testing app behaviour (qa-engineer), or translating interface strings (localization).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "content-pipeline",
       "source": "./plugins/content-pipeline",
       "description": "Use when producing or scheduling organic content — short video, social posts, long-form — from hook bank to script to publishing queue to weekly review, with a measurable link per piece. NOT for paid ad creatives (ads-review) or partner outreach (partner-outreach).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "content-strategy",
       "source": "./plugins/content-strategy",
       "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "conversion-audit",
       "source": "./plugins/conversion-audit",
       "description": "Use when auditing why a product does not convert — users not activating or paying, what to limit or gate, when the paywall should fire, which bugs cost money — or walking the journey before launch or ads. Produces a ranked, read-only diagnosis with one decided fix. NOT for a single metric question or building the fix.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "copy-editing",
       "source": "./plugins/copy-editing",
       "description": "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "copywriting",
       "source": "./plugins/copywriting",
       "description": "When the user wants to write, rewrite, or improve marketing copy for any page, including homepage, landing pages, pricing pages, feature pages, about pages, or product pages.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "cro",
       "source": "./plugins/cro",
       "description": "When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing pages, feature pages, lead capture forms, or contact forms.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "cross-repo-contract-review",
       "source": "./plugins/cross-repo-contract-review",
       "description": "Use when a change touches something shared across repositories — an API payload, enum, event name, feature flag, deep link or schema — to check the other side exists and the deploy order is safe before a pull request. NOT for general code quality or changes confined to one repository.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "customer-research",
       "source": "./plugins/customer-research",
       "description": "When the user wants to conduct, analyze, or synthesize customer research.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "db-migration",
       "source": "./plugins/db-migration",
       "description": "Use when a change needs a database schema migration or a data backfill — designing it (expand/contract), writing it re-runnable, reviewing one for locks and data loss, sequencing it with the code deploy, applying it, verifying it landed — or when a migration failed, the migration history is wedged or drifted, or someone asks where a migration stands. NOT for read-only data questions (product-analyst), seed or content data with its own pipeline, or deciding what the feature should be (product-owner).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "design-handoff",
       "source": "./plugins/design-handoff",
       "description": "Use when a screen or component is being produced in a design tool (Claude Design, Figma) or handed from design to implementation — onboarding the tool to the product's design system, specifying a new shared component, self-checking against the design system, and writing the developer handoff with every state, token names and interaction notes. NOT for judging an existing screen (designer) or writing the code.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "designer",
       "source": "./plugins/designer",
       "description": "Use when a screen or flow needs designing, judging or visually verifying — a design spec, a UX/UI review, design-system drift, store screenshots and marketing visuals, how other products design a screen, design QA after a build, or UI copy review. NOT for behaviour testing (qa-engineer) or implementing the design.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "directory-submissions",
       "source": "./plugins/directory-submissions",
       "description": "When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for backlinks, domain rating, and discovery.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "emails",
       "source": "./plugins/emails",
       "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "events",
       "source": "./plugins/events",
       "description": "When the user wants to plan, run, sponsor, speak at, or get pipeline from events — webinars, conferences, trade shows, meetups, dinners, workshops, virtual summits, or user conferences.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "free-tools",
       "source": "./plugins/free-tools",
       "description": "When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "growth-marketer",
       "source": "./plugins/growth-marketer",
       "description": "Use for paid acquisition and growth operations — reviewing or adjusting ad channels and budget, store listing optimization, designing or reading lifecycle campaigns (push, email, offers, win-back), funnel and cohort growth reviews, or a pre-launch conversion audit. NOT for organic content (content-marketer) or editing product code.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "growth-review",
       "source": "./plugins/growth-review",
       "description": "Use when the product has real users and the question is why they drop off, do not activate, do not pay or churn — reading funnels, cohorts, retention and session replays, or checking unit economics before spending more. NOT when there is no data yet (conversion-audit) or for ad platform decisions (ads-review).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "image",
       "source": "./plugins/image",
       "description": "When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "influencer-marketing",
       "source": "./plugins/influencer-marketing",
       "description": "When the user wants to run influencer, creator, or ambassador partnerships to promote their product — finding and vetting partners, structuring deals, briefing creators, disclosure compliance, and measuring ROI.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "issue-workflow",
       "source": "./plugins/issue-workflow",
       "description": "Use for the life of one tracked issue — creating a fully populated issue (from a review, an audit, a plan or a bug found mid-task), starting one (pick, assign, in progress, its own worktree), submitting one (rebase, a pull request that closes it, in review, merge only on a yes), or triaging open issues to owners. Other skills hand off here instead of creating issues themselves. NOT for whether work is worth doing (product-owner) or status reports (project-manager).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "launch",
       "source": "./plugins/launch",
       "description": "When the user wants to plan a product launch, feature announcement, or release strategy.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "lead-magnets",
       "source": "./plugins/lead-magnets",
       "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "learning-content-engineer",
       "source": "./plugins/learning-content-engineer",
       "description": "Use when curriculum content is the work — authoring or generating lessons, vocabulary, exercises, missions, placement tests or their audio and images; validating or reviewing a content batch; fixing a content bug a learner reported; importing or backfilling content into the live product; or extending the content schema or level map. NOT for deciding what to teach (product-owner), app or player code (mobile-engineer, backend-engineer), or interface copy (designer).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "lifecycle-campaign",
       "source": "./plugins/lifecycle-campaign",
       "description": "Use when designing, launching or reading a lifecycle campaign — push, email, in-app message, personal offer, discount code, gift or win-back — as cohort, moment, message, kill switch and holdout measurement. NOT for paid ads or messages the product already sends by default.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "localization",
       "source": "./plugins/localization",
       "description": "Use when user-facing text must work in more than one language — adding or changing copy in the localization files, keeping every locale in key parity and the generated code regenerated, translating codes from layers with no UI context at the point of display, plurals and interpolation, text expansion and scripts that need fonts, server-resolved localized fields, adding a new locale, auditing for hard-coded strings, or, in a language-learning product, separating the taught language from the learner's-language scaffold. NOT for store listings or marketing copy (aso-ops, copywriting), choosing the wording itself (designer), or authoring learning content (content-pack-qa).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "market-researcher",
       "source": "./plugins/market-researcher",
       "description": "Use when looking outward at the market — a competitor teardown, a benchmark of one dimension across competitors, competitor pricing, a market scan, a what-should-we-learn synthesis, or designing a study a human will run. NOT for this product's own metrics (product-analyst) or deciding what to build (product-owner).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "marketing-council",
       "source": "./plugins/marketing-council",
       "description": "When the user wants multiple expert perspectives on a marketing question — a simulated board of advisors staffed by legendary marketers (Seth Godin, David Ogilvy, Eugene Schwartz, April Dunford, Rory Sutherland, Alex Hormozi, Byron Sharp, and more).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "marketing-ideas",
       "source": "./plugins/marketing-ideas",
       "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "marketing-loops",
       "source": "./plugins/marketing-loops",
       "description": "When the user wants to set up a recurring, self-running marketing workflow — a repeatable loop an AI agent runs on a cadence (weekly, daily, on a trigger) rather than a one-off task.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "marketing-plan",
       "source": "./plugins/marketing-plan",
       "description": "When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "marketing-psychology",
       "source": "./plugins/marketing-psychology",
       "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "mobile-engineer",
       "source": "./plugins/mobile-engineer",
       "description": "Use when an agreed issue needs implementing in the mobile app — building a screen or feature, fixing an app bug, wiring a new backend field into the client, or deciding whether a change can ship over the air or needs a store build. NOT for designing the screen (designer), testing it (qa-engineer), or server-side changes (backend-engineer).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "offers",
       "source": "./plugins/offers",
       "description": "When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing, bonus stacking, guarantee design, scarcity/urgency, naming, and payment structure.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "onboarding",
       "source": "./plugins/onboarding",
       "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "partner-outreach",
       "source": "./plugins/partner-outreach",
       "description": "Use when acquiring users through partners or communities — building a partner list, writing a pitch or follow-up for one partner, seeding a group with gifts or codes, and measuring what each partner brings. NOT for paid ads or mass email campaigns.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "paywalls",
       "source": "./plugins/paywalls",
       "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "popups",
       "source": "./plugins/popups",
       "description": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "pricing",
       "source": "./plugins/pricing",
       "description": "When the user wants help with pricing decisions, packaging, or monetization strategy.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "product-analyst",
       "source": "./plugins/product-analyst",
       "description": "Use when the user wants a number or a data investigation — a metric question, why a metric moved, a post-ship readout, a metric spec for a feature, funnel, retention, cohort or segment cuts, revenue reporting, or an instrumentation check. NOT for deciding what to build (product-owner) or implementing tracking code.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "product-marketing",
       "source": "./plugins/product-marketing",
       "description": "When the user wants to create or update their product marketing context document.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "product-owner",
       "source": "./plugins/product-owner",
       "description": "Use when deciding what to build or in what order — a feature go/no-go, which bet comes next, how much of an approved feature to build, a product tradeoff, or a keep/iterate/kill review of a shipped feature. NOT for requirements (business-analyst), measurement (product-analyst) or tracking agreed work (project-manager).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "programmatic-seo",
       "source": "./plugins/programmatic-seo",
       "description": "When the user wants to create SEO-driven pages at scale using templates and data.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "project-manager",
       "source": "./plugins/project-manager",
       "description": "Use for the state and execution of work already decided — project or issue status, what is blocked, what to pick up next and in what order, triaging new issues, cross-repository sequencing, tracker hygiene, or milestone progress. NOT for whether a feature is worth building (product-owner) or writing its requirements.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "prospecting",
       "source": "./plugins/prospecting",
       "description": "When the user wants to find, qualify, and build a list of prospects to reach out to — across B2B SaaS, general B2B, or local small businesses.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "public-relations",
       "source": "./plugins/public-relations",
       "description": "When the user wants help with public relations, earned media, press coverage, journalist outreach, or media strategy (not pull requests).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "qa-engineer",
       "source": "./plugins/qa-engineer",
       "description": "Use when something built needs verifying against what was intended — testing a feature, verifying a bug fix, a test plan from a spec, a pre-release regression checklist, bug intake and reproduction, or checking contract seams between components. NOT for writing requirements, deciding whether to ship, or fixing the bugs found.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "role"
     },
     {
       "name": "referrals",
       "source": "./plugins/referrals",
       "description": "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "release",
       "source": "./plugins/release",
       "description": "Use when cutting a release — confirming what ships, preflight, building store binaries, store copy, opt-in submit for review, tagging every repository at the shipped commit — or an over-the-air patch, or answering where a release stands. The go-live step after store approval is app-live. NOT for continuous deploys with no cut, or deciding what goes into a release (product-owner).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "revops",
       "source": "./plugins/revops",
       "description": "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "sales-enablement",
       "source": "./plugins/sales-enablement",
       "description": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "schema",
       "source": "./plugins/schema",
       "description": "When the user wants to add, fix, or optimize schema markup and structured data on their site.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "security-review",
       "source": "./plugins/security-review",
       "description": "Use when a diff, branch or area needs a security review — authentication and authorization on every route, token issuance and refresh, purchases and entitlements (server-side receipts, webhook signatures and idempotency, promo, offer, gift and referral replay), file upload, injection, secrets in code, config or logs, personal data and minors' data, row-level security and storage policies, rate limits and cost abuse of paid upstream APIs, admin endpoints. Read-only: findings with file and line, severity and a concrete exploit or failure scenario. NOT for fixing what it finds (the engineer who owns the code), running attacks or scanners against production, general correctness review (code-reviewer), or a migration's lock and data-loss review (db-migration).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     },
     {
       "name": "seo-audit",
       "source": "./plugins/seo-audit",
       "description": "When the user wants to audit, review, or diagnose SEO issues on their site.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "signup",
       "source": "./plugins/signup",
       "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "site-architecture",
       "source": "./plugins/site-architecture",
       "description": "When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
+    },
+    {
+      "name": "skill-coach",
+      "source": "./plugins/skill-coach",
+      "description": "Use when an agent skill or role got something wrong and the lesson should stick — it quoted a stale fact, used a wrong method, skipped its own rule, or routed badly — and the owner wants it fixed so it does not recur (\"this skill is wrong\", \"update the skill\", \"learn from this\", \"don't do that again\"), or when a work session surfaced a fact a knowledge file should carry. Classifies the failure, fixes it at the right layer (project knowledge, a project skill, or the shared registry upstream) with the smallest change, and logs the lesson. NOT for writing a brand-new skill, a one-off mistake that will not recur, or fixing the product work the skill was doing.",
+      "version": "1.6.0",
+      "category": "skill"
     },
     {
       "name": "sms",
       "source": "./plugins/sms",
       "description": "When the user wants to plan, build, or optimize SMS, MMS, or WhatsApp marketing — including welcome flows, abandoned cart texts, post-purchase, win-back, promotional sends, or transactional/auth SMS.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "social",
       "source": "./plugins/social",
       "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, or Facebook, or wants to do social listening and engagement triage.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "video",
       "source": "./plugins/video",
       "description": "When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks.",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "external-skill"
     },
     {
       "name": "workspace-hygiene",
       "source": "./plugins/workspace-hygiene",
       "description": "Use when asked whether the local checkout is clean or in sync, before a release or a new batch of work, after merging several pull requests, or when clones, worktrees and branches have piled up — syncing every clone, listing and safely pruning merged worktrees and branches, checking each trunk against its remote, finding environment keys that drifted from the example files, and spotting agent-config drift (duplicate skill copies, .claude versus .agents) to hand to ai-os doctor and ai-os check. Report first; nothing is removed without the owner's yes. NOT for starting or submitting one issue's worktree (issue-workflow), a release cut (release), or fixing the agent configuration itself (ai-os doctor and ai-os sync).",
-      "version": "1.5.1",
+      "version": "1.6.0",
       "category": "skill"
     }
   ]

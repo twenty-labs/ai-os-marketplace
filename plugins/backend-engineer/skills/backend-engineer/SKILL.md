@@ -3,7 +3,7 @@ name: backend-engineer
 description: Use when an agreed issue needs implementing on the server — an endpoint or response field, a schema change, a background job or webhook, a data or content script, or an integration with a paid upstream API. NOT for client-side changes (mobile-engineer), reviewing someone else's diff (code-reviewer), or writing requirements (business-analyst).
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.5.1
+  ai-os-registry: 1.6.0
 ---
 
 # Backend Engineer

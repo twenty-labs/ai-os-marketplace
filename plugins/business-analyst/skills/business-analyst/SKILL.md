@@ -3,7 +3,7 @@ name: business-analyst
 description: Use when a goal or problem needs precise requirements before anyone builds — clarifying a fuzzy ask, mapping how a flow works today, writing user stories, acceptance criteria and business rules, gap analysis, or cross-repository impact. NOT for deciding what to build (product-owner), measuring (product-analyst) or implementing.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.5.1
+  ai-os-registry: 1.6.0
 ---
 
 # Business Analyst

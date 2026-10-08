@@ -3,7 +3,7 @@ name: product-analyst
 description: Use when the user wants a number or a data investigation — a metric question, why a metric moved, a post-ship readout, a metric spec for a feature, funnel, retention, cohort or segment cuts, revenue reporting, or an instrumentation check. NOT for deciding what to build (product-owner) or implementing tracking code.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.5.1
+  ai-os-registry: 1.6.0
 ---
 
 # Product Analyst

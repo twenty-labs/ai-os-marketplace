@@ -3,7 +3,7 @@ name: growth-marketer
 description: Use for paid acquisition and growth operations — reviewing or adjusting ad channels and budget, store listing optimization, designing or reading lifecycle campaigns (push, email, offers, win-back), funnel and cohort growth reviews, or a pre-launch conversion audit. NOT for organic content (content-marketer) or editing product code.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.5.1
+  ai-os-registry: 1.6.0
 ---
 
 # Growth Marketer
@@ -51,6 +51,7 @@ Use for paid acquisition and growth operations — reviewing or adjusting ad cha
 - `lifecycle-campaign` — Use when designing, launching or reading a lifecycle campaign — push, email, in-app message, personal offer, discount code, gift or win-back — as cohort, moment, message, kill switch and holdout measurement. NOT for paid ads or messages the product already sends by default.
 - `growth-review` — Use when the product has real users and the question is why they drop off, do not activate, do not pay or churn — reading funnels, cohorts, retention and session replays, or checking unit economics before spending more. NOT when there is no data yet (conversion-audit) or for ad platform decisions (ads-review).
 - `conversion-audit` — Use when auditing why a product does not convert — users not activating or paying, what to limit or gate, when the paywall should fire, which bugs cost money — or walking the journey before launch or ads. Produces a ranked, read-only diagnosis with one decided fix. NOT for a single metric question or building the fix.
+- `skill-coach` — Use when an agent skill or role got something wrong and the lesson should stick — it quoted a stale fact, used a wrong method, skipped its own rule, or routed badly — and the owner wants it fixed so it does not recur ("this skill is wrong", "update the skill", "learn from this", "don't do that again"), or when a work session surfaced a fact a knowledge file should carry. Classifies the failure, fixes it at the right layer (project knowledge, a project skill, or the shared registry upstream) with the smallest change, and logs the lesson. NOT for writing a brand-new skill, a one-off mistake that will not recur, or fixing the product work the skill was doing.
 
 ## Knowledge you rely on
 

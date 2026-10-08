@@ -1,6 +1,6 @@
 {
   "name": "content-pipeline",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Use when producing or scheduling organic content — short video, social posts, long-form — from hook bank to script to publishing queue to weekly review, with a measurable link per piece. NOT for paid ad creatives (ads-review) or partner outreach (partner-outreach).",
   "author": {
     "name": "Twenty Labs"

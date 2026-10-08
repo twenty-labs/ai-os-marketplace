@@ -3,7 +3,7 @@ name: product-owner
 description: Use when deciding what to build or in what order — a feature go/no-go, which bet comes next, how much of an approved feature to build, a product tradeoff, or a keep/iterate/kill review of a shipped feature. NOT for requirements (business-analyst), measurement (product-analyst) or tracking agreed work (project-manager).
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.5.1
+  ai-os-registry: 1.6.0
 ---
 
 # Product Owner

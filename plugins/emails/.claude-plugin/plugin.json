@@ -1,6 +1,6 @@
 {
   "name": "emails",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program.",
   "author": {
     "name": "Twenty Labs"
