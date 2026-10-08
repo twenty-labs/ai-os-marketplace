@@ -1,6 +1,6 @@
 {
   "name": "churn-prevention",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies.",
   "author": {
     "name": "Twenty Labs"

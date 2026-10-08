@@ -1,6 +1,6 @@
 {
   "name": "design-handoff",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Use when a screen or component is being produced in a design tool (Claude Design, Figma) or handed from design to implementation — onboarding the tool to the product's design system, specifying a new shared component, self-checking against the design system, and writing the developer handoff with every state, token names and interaction notes. NOT for judging an existing screen (designer) or writing the code.",
   "author": {
     "name": "Twenty Labs"

@@ -1,6 +1,6 @@
 {
   "name": "cross-repo-contract-review",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Use when a change touches something shared across repositories — an API payload, enum, event name, feature flag, deep link or schema — to check the other side exists and the deploy order is safe before a pull request. NOT for general code quality or changes confined to one repository.",
   "author": {
     "name": "Twenty Labs"

@@ -1,6 +1,6 @@
 {
   "name": "designer",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Use when a screen or flow needs designing, judging or visually verifying — a design spec, a UX/UI review, design-system drift, store screenshots and marketing visuals, how other products design a screen, design QA after a build, or UI copy review. NOT for behaviour testing (qa-engineer) or implementing the design.",
   "author": {
     "name": "Twenty Labs"

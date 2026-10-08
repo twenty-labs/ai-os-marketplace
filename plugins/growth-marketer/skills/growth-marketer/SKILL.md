@@ -3,7 +3,7 @@ name: growth-marketer
 description: Use for paid acquisition and growth operations — reviewing or adjusting ad channels and budget, store listing optimization, designing or reading lifecycle campaigns (push, email, offers, win-back), funnel and cohort growth reviews, or a pre-launch conversion audit. NOT for organic content (content-marketer) or editing product code.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 1.5.0
+  ai-os-registry: 1.5.1
 ---
 
 # Growth Marketer

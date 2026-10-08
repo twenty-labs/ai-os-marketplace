@@ -1,6 +1,6 @@
 {
   "name": "product-analyst",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Use when the user wants a number or a data investigation — a metric question, why a metric moved, a post-ship readout, a metric spec for a feature, funnel, retention, cohort or segment cuts, revenue reporting, or an instrumentation check. NOT for deciding what to build (product-owner) or implementing tracking code.",
   "author": {
     "name": "Twenty Labs"

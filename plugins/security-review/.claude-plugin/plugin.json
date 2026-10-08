@@ -1,6 +1,6 @@
 {
   "name": "security-review",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Use when a diff, branch or area needs a security review — authentication and authorization on every route, token issuance and refresh, purchases and entitlements (server-side receipts, webhook signatures and idempotency, promo, offer, gift and referral replay), file upload, injection, secrets in code, config or logs, personal data and minors' data, row-level security and storage policies, rate limits and cost abuse of paid upstream APIs, admin endpoints. Read-only: findings with file and line, severity and a concrete exploit or failure scenario. NOT for fixing what it finds (the engineer who owns the code), running attacks or scanners against production, general correctness review (code-reviewer), or a migration's lock and data-loss review (db-migration).",
   "author": {
     "name": "Twenty Labs"
