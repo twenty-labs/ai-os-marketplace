@@ -1,0 +1,97 @@
+{
+  "workflow": "research",
+  "title": "Research",
+  "axes": {
+    "size": "medium",
+    "risk": "high",
+    "ambiguous": true
+  },
+  "trivial": false,
+  "stages": [
+    {
+      "id": "search",
+      "skill": "research-and-reuse",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash",
+        "WebSearch",
+        "WebFetch"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../research-and-reuse/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "evaluate",
+      "skill": "research-and-reuse",
+      "uses": [],
+      "runs": "subagent",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "sequential",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash",
+        "WebSearch",
+        "WebFetch"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../research-and-reuse/SKILL.md"
+      ],
+      "subagents": "1 per ticket",
+      "deep": "0",
+      "label": "research:evaluate:<ticket>"
+    },
+    {
+      "id": "recommend",
+      "skill": "research-and-reuse",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "gate": "plan",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../research-and-reuse/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    }
+  ],
+  "skipped": [],
+  "gates": [
+    {
+      "gate": "plan",
+      "label": "GATE 1",
+      "after": "recommend"
+    }
+  ]
+}

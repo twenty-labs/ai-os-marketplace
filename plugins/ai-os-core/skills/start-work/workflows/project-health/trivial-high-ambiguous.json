@@ -1,0 +1,89 @@
+{
+  "workflow": "project-health",
+  "title": "Project health",
+  "axes": {
+    "size": "trivial",
+    "risk": "high",
+    "ambiguous": true
+  },
+  "trivial": true,
+  "stages": [
+    {
+      "id": "gather",
+      "role": "project-manager",
+      "uses": [
+        "issue-workflow"
+      ],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../issue-workflow/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "report",
+      "role": "project-manager",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "gate": "finish",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "file",
+      "role": "project-manager",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Bash"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [],
+      "subagents": "0",
+      "deep": "0"
+    }
+  ],
+  "skipped": [],
+  "gates": [
+    {
+      "gate": "finish",
+      "label": "GATE 2",
+      "after": "report"
+    }
+  ]
+}

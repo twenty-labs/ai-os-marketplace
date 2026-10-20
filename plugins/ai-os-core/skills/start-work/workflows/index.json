@@ -1,0 +1,167 @@
+{
+  "registry": "3.0.0",
+  "workflows": [
+    {
+      "id": "bugfix",
+      "title": "Bugfix",
+      "description": "Fix a reported bug, from root cause and a failing test to a reviewed pull request.",
+      "changeTypes": [
+        "bug"
+      ],
+      "shortcut": true,
+      "requires": {
+        "knowledge": []
+      },
+      "stages": [
+        "debug",
+        "failing-test",
+        "implement",
+        "review",
+        "verify",
+        "finish",
+        "learn"
+      ]
+    },
+    {
+      "id": "feature",
+      "title": "Feature",
+      "description": "Build a new capability end to end, from the plan card to a reviewed pull request.",
+      "changeTypes": [
+        "feature"
+      ],
+      "shortcut": true,
+      "requires": {
+        "knowledge": []
+      },
+      "stages": [
+        "research",
+        "brainstorm",
+        "plan",
+        "implement",
+        "review",
+        "verify",
+        "finish",
+        "learn"
+      ]
+    },
+    {
+      "id": "hotfix",
+      "title": "Hotfix",
+      "description": "Fix a high-risk or production-affecting bug with the diagnosis accepted first, a minimal change and a mandatory review.",
+      "changeTypes": [],
+      "shortcut": true,
+      "requires": {
+        "knowledge": []
+      },
+      "stages": [
+        "diagnose",
+        "plan",
+        "failing-test",
+        "implement",
+        "review",
+        "verify",
+        "finish",
+        "learn"
+      ]
+    },
+    {
+      "id": "project-health",
+      "title": "Project health",
+      "description": "Weekly gardener run that cross-checks the tracker, pull requests, milestones, knowledge and handoffs and produces one health-report issue.",
+      "changeTypes": [],
+      "shortcut": false,
+      "requires": {
+        "knowledge": []
+      },
+      "stages": [
+        "gather",
+        "report",
+        "file"
+      ]
+    },
+    {
+      "id": "qa",
+      "title": "QA",
+      "description": "Verify a built change or a deployed build against what was intended, with browser checks and a SHIP or DO NOT SHIP verdict. Fixes are not made here.",
+      "changeTypes": [],
+      "shortcut": true,
+      "requires": {
+        "knowledge": []
+      },
+      "stages": [
+        "plan",
+        "approve",
+        "browser",
+        "e2e",
+        "report"
+      ]
+    },
+    {
+      "id": "release",
+      "title": "Release",
+      "description": "Take merged work to a release - inventory since the last tag, release notes and store copy from changelog fragments, the cut behind the owner's approval, then close the milestone, record lessons and update the roadmap.",
+      "changeTypes": [],
+      "shortcut": true,
+      "requires": {
+        "knowledge": [
+          "release-surface"
+        ]
+      },
+      "stages": [
+        "inventory",
+        "notes",
+        "cut",
+        "close-milestone",
+        "lessons",
+        "roadmap"
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research",
+      "description": "Research a question before building - what already exists in the repository, registries and on GitHub, what to adopt, extend or build - and report with sources.",
+      "changeTypes": [],
+      "shortcut": true,
+      "requires": {
+        "knowledge": []
+      },
+      "stages": [
+        "search",
+        "evaluate",
+        "recommend"
+      ]
+    },
+    {
+      "id": "roadmap-review",
+      "title": "Roadmap review",
+      "description": "Review the roadmap held in tracker milestones (one GitHub Project per multi-repo product) and propose what to cut, move or add.",
+      "changeTypes": [],
+      "shortcut": false,
+      "requires": {
+        "knowledge": []
+      },
+      "stages": [
+        "progress",
+        "replan",
+        "apply"
+      ]
+    },
+    {
+      "id": "triage",
+      "title": "Triage",
+      "description": "Take new issues from needs-triage to ready-for-agent or ready-for-human, with a type, a size, a risk and a blocked-by line.",
+      "changeTypes": [
+        "spike",
+        "decision"
+      ],
+      "shortcut": false,
+      "requires": {
+        "knowledge": []
+      },
+      "stages": [
+        "triage",
+        "slice"
+      ]
+    }
+  ]
+}

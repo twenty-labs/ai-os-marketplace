@@ -1,0 +1,38 @@
+{
+  "workflow": "triage",
+  "title": "Triage",
+  "axes": {
+    "size": "small",
+    "risk": "critical",
+    "ambiguous": true
+  },
+  "trivial": false,
+  "stages": [
+    {
+      "id": "triage",
+      "skill": "issue-workflow",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../issue-workflow/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "slice",
+      "rule": 0
+    }
+  ],
+  "gates": []
+}

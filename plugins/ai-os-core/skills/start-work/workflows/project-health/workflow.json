@@ -1,0 +1,61 @@
+{
+  "apiVersion": "ai-os.twentylabs.dev/v1",
+  "kind": "Workflow",
+  "metadata": {
+    "id": "project-health",
+    "title": "Project health",
+    "description": "Weekly gardener run that cross-checks the tracker, pull requests, milestones, knowledge and handoffs and produces one health-report issue."
+  },
+  "spec": {
+    "shortcut": false,
+    "changeTypes": [],
+    "requires": {
+      "knowledge": []
+    },
+    "stages": [
+      {
+        "id": "gather",
+        "role": "project-manager",
+        "uses": [
+          "issue-workflow"
+        ],
+        "runs": "main",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Bash"
+        ]
+      },
+      {
+        "id": "report",
+        "role": "project-manager",
+        "uses": [],
+        "runs": "main",
+        "gate": "finish",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Bash"
+        ]
+      },
+      {
+        "id": "file",
+        "role": "project-manager",
+        "uses": [],
+        "runs": "main",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Bash"
+        ]
+      }
+    ],
+    "defaults": {
+      "when": []
+    }
+  }
+}

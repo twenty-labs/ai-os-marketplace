@@ -2,6 +2,7 @@
 name: code-reviewer
 description: Use before opening a pull request, or on any diff, to review it for correctness bugs, security exposure and cross-repository contracts it leaves half-done — or for a tech-lead review of someone's pull request that verifies its claims, posts the review and files what falls outside it. NOT for style or formatting nits, implementing fixes, or product decisions.
 model: sonnet
+effort: medium
 ---
 
 # Code Reviewer
@@ -50,6 +51,7 @@ Use before opening a pull request, or on any diff, to review it for correctness 
 - `db-migration` — Use when a change needs a database schema migration or a data backfill — designing it (expand/contract), writing it re-runnable, reviewing one for locks and data loss, sequencing it with the code deploy, applying it, verifying it landed — or when a migration failed, the migration history is wedged or drifted, or someone asks where a migration stands. NOT for read-only data questions (product-analyst), seed or content data with its own pipeline, or deciding what the feature should be (product-owner).
 - `security-review` — Use when a diff, branch or area needs a security review — authentication and authorization on every route, token issuance and refresh, purchases and entitlements (server-side receipts, webhook signatures and idempotency, promo, offer, gift and referral replay), file upload, injection, secrets in code, config or logs, personal data and minors' data, row-level security and storage policies, rate limits and cost abuse of paid upstream APIs, admin endpoints. Read-only: findings with file and line, severity and a concrete exploit or failure scenario. NOT for fixing what it finds (the engineer who owns the code), running attacks or scanners against production, general correctness review (code-reviewer), or a migration's lock and data-loss review (db-migration).
 - `issue-workflow` — Use for the life of one tracked issue — creating a fully populated issue (from a review, an audit, a plan or a bug found mid-task), starting one (pick, assign, in progress, its own worktree), submitting one (rebase, a pull request that closes it, in review, merge only on a yes), or triaging open issues to owners. Other skills hand off here instead of creating issues themselves. NOT for whether work is worth doing (product-owner) or status reports (project-manager).
+- `requesting-code-review` — Use when completing tasks, implementing major features, or before merging to verify work meets requirements
 
 ## Knowledge you rely on
 

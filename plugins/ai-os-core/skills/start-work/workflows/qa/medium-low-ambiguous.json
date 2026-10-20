@@ -1,0 +1,139 @@
+{
+  "workflow": "qa",
+  "title": "QA",
+  "axes": {
+    "size": "medium",
+    "risk": "low",
+    "ambiguous": true
+  },
+  "trivial": false,
+  "stages": [
+    {
+      "id": "plan",
+      "role": "qa-engineer",
+      "uses": [
+        "test-driven-development"
+      ],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../test-driven-development/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "approve",
+      "role": "qa-engineer",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "gate": "plan",
+      "hooks": [],
+      "tools": [
+        "Read"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "browser",
+      "skill": "browser-qa",
+      "uses": [],
+      "runs": "subagent",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "sequential",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../browser-qa/SKILL.md"
+      ],
+      "subagents": "1 per ticket",
+      "deep": "0",
+      "label": "qa:browser:<ticket>"
+    },
+    {
+      "id": "e2e",
+      "skill": "e2e-testing",
+      "uses": [],
+      "runs": "subagent",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "sequential",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../e2e-testing/SKILL.md"
+      ],
+      "subagents": "1 per ticket",
+      "deep": "0",
+      "label": "qa:e2e:<ticket>"
+    },
+    {
+      "id": "report",
+      "skill": "verification-before-completion",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../verification-before-completion/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    }
+  ],
+  "skipped": [],
+  "gates": [
+    {
+      "gate": "plan",
+      "label": "GATE 1",
+      "after": "approve"
+    }
+  ]
+}

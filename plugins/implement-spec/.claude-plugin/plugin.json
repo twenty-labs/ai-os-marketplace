@@ -1,0 +1,12 @@
+{
+  "name": "implement-spec",
+  "description": "Implement a spec and its tickets in code: run the ticket task graph on one integration branch with parallel implementer subagents.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "delivery-management"
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "apiVersion": "ai-os.twentylabs.dev/v1",
+  "kind": "Workflow",
+  "metadata": {
+    "id": "bugfix",
+    "title": "Bugfix",
+    "description": "Fix a reported bug, from root cause and a failing test to a reviewed pull request."
+  },
+  "spec": {
+    "shortcut": true,
+    "changeTypes": [
+      "bug"
+    ],
+    "requires": {
+      "knowledge": []
+    },
+    "stages": [
+      {
+        "id": "debug",
+        "skill": "systematic-debugging",
+        "uses": [],
+        "runs": "main",
+        "hooks": [],
+        "tools": []
+      },
+      {
+        "id": "failing-test",
+        "skill": "test-driven-development",
+        "uses": [],
+        "runs": "main",
+        "gate": "plan",
+        "hooks": [],
+        "tools": []
+      },
+      {
+        "id": "implement",
+        "skill": "subagent-driven-development",
+        "uses": [
+          "test-driven-development"
+        ],
+        "runs": "subagent",
+        "tier": "standard",
+        "effort": "medium",
+        "execution": "sequential",
+        "isolation": "worktree",
+        "hooks": [
+          "post-edit-quality"
+        ],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Edit",
+          "Write",
+          "Bash"
+        ]
+      },
+      {
+        "id": "review",
+        "skill": "orch-review",
+        "uses": [
+          "review-spec-standards",
+          "security-review"
+        ],
+        "script": "review",
+        "runs": "subagent",
+        "tier": "deep",
+        "effort": "high",
+        "execution": "parallel",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Bash"
+        ]
+      },
+      {
+        "id": "verify",
+        "skill": "verification-before-completion",
+        "uses": [],
+        "runs": "main",
+        "hooks": [],
+        "tools": []
+      },
+      {
+        "id": "finish",
+        "skill": "finishing-a-development-branch",
+        "uses": [
+          "pr"
+        ],
+        "runs": "main",
+        "gate": "finish",
+        "hooks": [
+          "pr-gate"
+        ],
+        "tools": []
+      },
+      {
+        "id": "learn",
+        "skill": "retro",
+        "uses": [
+          "skill-coach"
+        ],
+        "runs": "main",
+        "hooks": [],
+        "tools": []
+      }
+    ],
+    "defaults": {
+      "when": [
+        {
+          "match": {
+            "size": [
+              "trivial"
+            ]
+          },
+          "skip": [
+            "debug",
+            "failing-test",
+            "review",
+            "learn"
+          ],
+          "set": {
+            "implement": {
+              "runs": "main",
+              "tier": "fast",
+              "effort": "low",
+              "execution": "inline",
+              "isolation": "none"
+            }
+          }
+        },
+        {
+          "match": {
+            "risk": [
+              "high",
+              "critical"
+            ]
+          },
+          "skip": [],
+          "set": {
+            "failing-test": {
+              "effort": "xhigh"
+            },
+            "review": {
+              "tier": "deep",
+              "effort": "xhigh"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

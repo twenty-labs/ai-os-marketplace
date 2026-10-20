@@ -3,7 +3,7 @@ name: mobile-engineer
 description: Use when an agreed issue needs implementing in the mobile app — building a screen or feature, fixing an app bug, wiring a new backend field into the client, or deciding whether a change can ship over the air or needs a store build. NOT for designing the screen (designer), testing it (qa-engineer), or server-side changes (backend-engineer).
 metadata:
   ai-os-kind: role
-  ai-os-registry: 2.0.0
+  ai-os-registry: 3.0.0
 ---
 
 # Mobile Engineer
@@ -53,8 +53,12 @@ Use when an agreed issue needs implementing in the mobile app — building a scr
 - `analytics-instrumentation` — Use when feature work must emit product analytics — registering events and properties before code sends them, naming them, choosing client or server emission, person versus event properties, keeping personal data and minors out, adding a funnel step, coverage tests that fail on unregistered or unemitted events, renaming or retiring an event, or checking after release that a shipped event actually arrives. NOT for answering metric questions, readouts or metric specs (product-analyst), marketing attribution setup, or choosing an analytics vendor.
 - `localization` — Use when user-facing text must work in more than one language — adding or changing copy in the localization files, keeping every locale in key parity and the generated code regenerated, translating codes from layers with no UI context at the point of display, plurals and interpolation, text expansion and scripts that need fonts, server-resolved localized fields, adding a new locale, auditing for hard-coded strings, or, in a language-learning product, separating the taught language from the learner's-language scaffold. NOT for store listings or marketing copy (aso-ops, copywriting), choosing the wording itself (designer), or authoring learning content (content-pack-qa).
 - `app-store-compliance` — Use before submitting a mobile build to App Store or Google Play review, after a rejection, to check one risk area (purchases, account deletion, permissions, privacy, sign-in), to decide whether a change may ship over the air or needs a store build, or to draft review notes. NOT for store screenshots or fixing findings.
-- `release` — Use when cutting a release — confirming what ships, preflight, building store binaries, store copy, opt-in submit for review, tagging every repository at the shipped commit — or an over-the-air patch, or answering where a release stands. The go-live step after store approval is app-live. NOT for continuous deploys with no cut, or deciding what goes into a release (product-owner).
+- `release-cut` — Use when cutting a release — confirming what ships, preflight, building store binaries, store copy, opt-in submit for review, tagging every repository at the shipped commit — or an over-the-air patch, or answering where a release stands. The go-live step after store approval is app-live. NOT for continuous deploys with no cut, or deciding what goes into a release (product-owner).
 - `workspace-hygiene` — Use when asked whether the local checkout is clean or in sync, before a release or a new batch of work, after merging several pull requests, or when clones, worktrees and branches have piled up — syncing every clone, listing and safely pruning merged worktrees and branches, checking each trunk against its remote, finding environment keys that drifted from the example files, and spotting agent-config drift (duplicate skill copies, .claude versus .agents) to hand to ai-os doctor and ai-os check. Report first; nothing is removed without the owner's yes. NOT for starting or submitting one issue's worktree (issue-workflow), a release cut (release), or fixing the agent configuration itself (ai-os doctor and ai-os sync).
+- `test-driven-development` — Use when implementing any feature or bugfix, before writing implementation code
+- `systematic-debugging` — Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+- `verification-before-completion` — Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
+- `receiving-code-review` — Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation
 
 ## Knowledge you rely on
 

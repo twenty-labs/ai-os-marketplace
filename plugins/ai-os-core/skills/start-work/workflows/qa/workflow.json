@@ -1,0 +1,102 @@
+{
+  "apiVersion": "ai-os.twentylabs.dev/v1",
+  "kind": "Workflow",
+  "metadata": {
+    "id": "qa",
+    "title": "QA",
+    "description": "Verify a built change or a deployed build against what was intended, with browser checks and a SHIP or DO NOT SHIP verdict. Fixes are not made here."
+  },
+  "spec": {
+    "shortcut": true,
+    "changeTypes": [],
+    "requires": {
+      "knowledge": []
+    },
+    "stages": [
+      {
+        "id": "plan",
+        "role": "qa-engineer",
+        "uses": [
+          "test-driven-development"
+        ],
+        "runs": "main",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Bash"
+        ]
+      },
+      {
+        "id": "approve",
+        "role": "qa-engineer",
+        "uses": [],
+        "runs": "main",
+        "gate": "plan",
+        "hooks": [],
+        "tools": [
+          "Read"
+        ]
+      },
+      {
+        "id": "browser",
+        "skill": "browser-qa",
+        "uses": [],
+        "runs": "subagent",
+        "tier": "standard",
+        "effort": "medium",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Bash"
+        ]
+      },
+      {
+        "id": "e2e",
+        "skill": "e2e-testing",
+        "uses": [],
+        "runs": "subagent",
+        "tier": "standard",
+        "effort": "medium",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Bash"
+        ]
+      },
+      {
+        "id": "report",
+        "skill": "verification-before-completion",
+        "uses": [],
+        "runs": "main",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob"
+        ]
+      }
+    ],
+    "defaults": {
+      "when": [
+        {
+          "match": {
+            "size": [
+              "trivial",
+              "small"
+            ]
+          },
+          "skip": [
+            "e2e"
+          ],
+          "set": {}
+        }
+      ]
+    }
+  }
+}

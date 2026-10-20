@@ -1,0 +1,60 @@
+{
+  "apiVersion": "ai-os.twentylabs.dev/v1",
+  "kind": "Workflow",
+  "metadata": {
+    "id": "roadmap-review",
+    "title": "Roadmap review",
+    "description": "Review the roadmap held in tracker milestones (one GitHub Project per multi-repo product) and propose what to cut, move or add."
+  },
+  "spec": {
+    "shortcut": false,
+    "changeTypes": [],
+    "requires": {
+      "knowledge": []
+    },
+    "stages": [
+      {
+        "id": "progress",
+        "role": "project-manager",
+        "uses": [
+          "issue-workflow"
+        ],
+        "runs": "main",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Bash"
+        ]
+      },
+      {
+        "id": "replan",
+        "role": "product-owner",
+        "uses": [],
+        "runs": "main",
+        "gate": "plan",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob"
+        ]
+      },
+      {
+        "id": "apply",
+        "role": "project-manager",
+        "uses": [],
+        "runs": "main",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Bash"
+        ]
+      }
+    ],
+    "defaults": {
+      "when": []
+    }
+  }
+}

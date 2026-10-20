@@ -1,0 +1,12 @@
+{
+  "name": "promote-skill",
+  "description": "Use when the owner asks to share a skill with every repository: promote a repo-local skill, a personal skill from a Claude config directory, or an external GitHub skill into the shared registry. Validates it, shows what becomes public, and opens the registry pull request with `ai-os skill promote`. NOT for writing or improving a skill (use skill-coach), for editing a skill that is already in the registry, or for installing a registry skill into a repository.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "skill-maintenance"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "workflow": "triage",
+  "title": "Triage",
+  "axes": {
+    "size": "large",
+    "risk": "medium",
+    "ambiguous": false
+  },
+  "trivial": false,
+  "stages": [
+    {
+      "id": "triage",
+      "skill": "issue-workflow",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../issue-workflow/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "slice",
+      "skill": "to-tickets",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "gate": "plan",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../to-tickets/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    }
+  ],
+  "skipped": [],
+  "gates": [
+    {
+      "gate": "plan",
+      "label": "GATE 1",
+      "after": "slice"
+    }
+  ]
+}

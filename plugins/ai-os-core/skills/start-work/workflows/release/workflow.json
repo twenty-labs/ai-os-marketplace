@@ -1,0 +1,79 @@
+{
+  "apiVersion": "ai-os.twentylabs.dev/v1",
+  "kind": "Workflow",
+  "metadata": {
+    "id": "release",
+    "title": "Release",
+    "description": "Take merged work to a release - inventory since the last tag, release notes and store copy from changelog fragments, the cut behind the owner's approval, then close the milestone, record lessons and update the roadmap."
+  },
+  "spec": {
+    "shortcut": true,
+    "changeTypes": [],
+    "requires": {
+      "knowledge": [
+        "release-surface"
+      ]
+    },
+    "stages": [
+      {
+        "id": "inventory",
+        "skill": "release-cut",
+        "uses": [],
+        "runs": "main",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Bash"
+        ]
+      },
+      {
+        "id": "notes",
+        "skill": "release-notes",
+        "uses": [
+          "copywriting"
+        ],
+        "runs": "main",
+        "hooks": [],
+        "tools": []
+      },
+      {
+        "id": "cut",
+        "skill": "release-cut",
+        "uses": [],
+        "runs": "main",
+        "gate": "finish",
+        "hooks": [],
+        "tools": []
+      },
+      {
+        "id": "close-milestone",
+        "skill": "issue-workflow",
+        "uses": [],
+        "runs": "main",
+        "hooks": [],
+        "tools": []
+      },
+      {
+        "id": "lessons",
+        "skill": "retro",
+        "uses": [],
+        "runs": "main",
+        "hooks": [],
+        "tools": []
+      },
+      {
+        "id": "roadmap",
+        "role": "product-owner",
+        "uses": [],
+        "runs": "main",
+        "hooks": [],
+        "tools": []
+      }
+    ],
+    "defaults": {
+      "when": []
+    }
+  }
+}

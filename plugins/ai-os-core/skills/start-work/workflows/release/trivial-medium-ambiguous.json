@@ -1,0 +1,141 @@
+{
+  "workflow": "release",
+  "title": "Release",
+  "axes": {
+    "size": "trivial",
+    "risk": "medium",
+    "ambiguous": true
+  },
+  "trivial": true,
+  "stages": [
+    {
+      "id": "inventory",
+      "skill": "release-cut",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../release-cut/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "notes",
+      "skill": "release-notes",
+      "uses": [
+        "copywriting"
+      ],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../release-notes/SKILL.md",
+        "../copywriting/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "cut",
+      "skill": "release-cut",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "gate": "finish",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../release-cut/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "close-milestone",
+      "skill": "issue-workflow",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../issue-workflow/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "lessons",
+      "skill": "retro",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../retro/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "roadmap",
+      "role": "product-owner",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [],
+      "subagents": "0",
+      "deep": "0"
+    }
+  ],
+  "skipped": [],
+  "gates": [
+    {
+      "gate": "finish",
+      "label": "GATE 2",
+      "after": "cut"
+    }
+  ]
+}

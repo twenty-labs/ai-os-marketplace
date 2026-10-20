@@ -1,6 +1,5 @@
 {
   "name": "product-marketing",
-  "version": "2.0.0",
   "description": "When the user wants to create or update their product marketing context document.",
   "author": {
     "name": "Twenty Labs"

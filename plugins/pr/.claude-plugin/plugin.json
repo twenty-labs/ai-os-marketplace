@@ -1,0 +1,12 @@
+{
+  "name": "pr",
+  "description": "Use when writing or updating a pull request body: summary, blast radius, how it was verified, and what a reviewer should look at first.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "delivery-management"
+  ]
+}

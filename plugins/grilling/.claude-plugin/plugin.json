@@ -1,0 +1,12 @@
+{
+  "name": "grilling",
+  "description": "Grill the user relentlessly about a plan, decision, or idea, in frontier rounds with a recommended answer for each question. Use when the user wants to stress-test their thinking, uses any 'grill' trigger phrase, or when a brainstorm or plan card has open decisions to settle.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "requirements-analysis"
+  ]
+}

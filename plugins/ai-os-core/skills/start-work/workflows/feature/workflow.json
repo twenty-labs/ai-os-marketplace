@@ -1,0 +1,212 @@
+{
+  "apiVersion": "ai-os.twentylabs.dev/v1",
+  "kind": "Workflow",
+  "metadata": {
+    "id": "feature",
+    "title": "Feature",
+    "description": "Build a new capability end to end, from the plan card to a reviewed pull request."
+  },
+  "spec": {
+    "shortcut": true,
+    "changeTypes": [
+      "feature"
+    ],
+    "requires": {
+      "knowledge": []
+    },
+    "stages": [
+      {
+        "id": "research",
+        "skill": "research-and-reuse",
+        "uses": [],
+        "runs": "subagent",
+        "tier": "standard",
+        "effort": "medium",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Bash",
+          "WebSearch",
+          "WebFetch"
+        ]
+      },
+      {
+        "id": "brainstorm",
+        "skill": "brainstorming",
+        "uses": [
+          "grilling"
+        ],
+        "runs": "main",
+        "hooks": [],
+        "tools": []
+      },
+      {
+        "id": "plan",
+        "skill": "writing-plans",
+        "uses": [
+          "to-tickets"
+        ],
+        "runs": "main",
+        "gate": "plan",
+        "hooks": [],
+        "tools": []
+      },
+      {
+        "id": "implement",
+        "skill": "subagent-driven-development",
+        "uses": [
+          "test-driven-development",
+          "using-git-worktrees"
+        ],
+        "runs": "subagent",
+        "tier": "standard",
+        "effort": "medium",
+        "execution": "sequential",
+        "isolation": "worktree",
+        "hooks": [
+          "post-edit-quality"
+        ],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Edit",
+          "Write",
+          "Bash"
+        ]
+      },
+      {
+        "id": "review",
+        "skill": "orch-review",
+        "uses": [
+          "review-spec-standards",
+          "security-review"
+        ],
+        "script": "review",
+        "runs": "subagent",
+        "tier": "deep",
+        "effort": "high",
+        "execution": "parallel",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Bash"
+        ]
+      },
+      {
+        "id": "verify",
+        "skill": "verification-before-completion",
+        "uses": [],
+        "runs": "main",
+        "hooks": [],
+        "tools": []
+      },
+      {
+        "id": "finish",
+        "skill": "finishing-a-development-branch",
+        "uses": [
+          "pr"
+        ],
+        "runs": "main",
+        "gate": "finish",
+        "hooks": [
+          "pr-gate"
+        ],
+        "tools": []
+      },
+      {
+        "id": "learn",
+        "skill": "retro",
+        "uses": [
+          "skill-coach"
+        ],
+        "runs": "main",
+        "hooks": [],
+        "tools": []
+      }
+    ],
+    "defaults": {
+      "when": [
+        {
+          "match": {
+            "size": [
+              "trivial"
+            ]
+          },
+          "skip": [
+            "research",
+            "brainstorm",
+            "plan",
+            "review",
+            "learn"
+          ],
+          "set": {
+            "implement": {
+              "runs": "main",
+              "tier": "fast",
+              "effort": "low",
+              "execution": "inline",
+              "isolation": "none"
+            }
+          }
+        },
+        {
+          "match": {
+            "size": [
+              "small"
+            ]
+          },
+          "skip": [
+            "research",
+            "brainstorm"
+          ],
+          "set": {}
+        },
+        {
+          "match": {
+            "ambiguous": false
+          },
+          "skip": [
+            "brainstorm"
+          ],
+          "set": {}
+        },
+        {
+          "match": {
+            "size": [
+              "large"
+            ]
+          },
+          "skip": [],
+          "set": {
+            "implement": {
+              "execution": "parallel"
+            }
+          }
+        },
+        {
+          "match": {
+            "risk": [
+              "high",
+              "critical"
+            ]
+          },
+          "skip": [],
+          "set": {
+            "plan": {
+              "effort": "xhigh"
+            },
+            "review": {
+              "tier": "deep",
+              "effort": "xhigh"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

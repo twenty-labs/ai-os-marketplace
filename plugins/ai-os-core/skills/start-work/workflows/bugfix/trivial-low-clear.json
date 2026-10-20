@@ -1,0 +1,112 @@
+{
+  "workflow": "bugfix",
+  "title": "Bugfix",
+  "axes": {
+    "size": "trivial",
+    "risk": "low",
+    "ambiguous": false
+  },
+  "trivial": true,
+  "stages": [
+    {
+      "id": "implement",
+      "skill": "subagent-driven-development",
+      "uses": [
+        "test-driven-development"
+      ],
+      "runs": "main",
+      "tier": "fast",
+      "effort": "low",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [
+        "post-edit-quality"
+      ],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Edit",
+        "Write",
+        "Bash"
+      ],
+      "notes": [],
+      "model": "haiku",
+      "read": [
+        "../subagent-driven-development/SKILL.md",
+        "../test-driven-development/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "verify",
+      "skill": "verification-before-completion",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../verification-before-completion/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "finish",
+      "skill": "finishing-a-development-branch",
+      "uses": [
+        "pr"
+      ],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "gate": "finish",
+      "hooks": [
+        "pr-gate"
+      ],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../finishing-a-development-branch/SKILL.md",
+        "../pr/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "debug",
+      "rule": 0
+    },
+    {
+      "id": "failing-test",
+      "rule": 0
+    },
+    {
+      "id": "review",
+      "rule": 0
+    },
+    {
+      "id": "learn",
+      "rule": 0
+    }
+  ],
+  "gates": [
+    {
+      "gate": "finish",
+      "label": "GATE 2",
+      "after": "finish"
+    }
+  ]
+}

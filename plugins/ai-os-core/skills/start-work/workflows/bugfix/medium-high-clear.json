@@ -1,0 +1,201 @@
+{
+  "workflow": "bugfix",
+  "title": "Bugfix",
+  "axes": {
+    "size": "medium",
+    "risk": "high",
+    "ambiguous": false
+  },
+  "trivial": false,
+  "stages": [
+    {
+      "id": "debug",
+      "skill": "systematic-debugging",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../systematic-debugging/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "failing-test",
+      "skill": "test-driven-development",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "gate": "plan",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "suggestion": {
+        "effort": "xhigh",
+        "reason": "risk high + failing-test stage"
+      },
+      "model": "sonnet",
+      "read": [
+        "../test-driven-development/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "implement",
+      "skill": "subagent-driven-development",
+      "uses": [
+        "test-driven-development"
+      ],
+      "runs": "subagent",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "sequential",
+      "isolation": "worktree",
+      "hooks": [
+        "post-edit-quality"
+      ],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Edit",
+        "Write",
+        "Bash"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../subagent-driven-development/SKILL.md",
+        "../test-driven-development/SKILL.md"
+      ],
+      "subagents": "1 per ticket",
+      "deep": "0",
+      "label": "bugfix:implement:<ticket>"
+    },
+    {
+      "id": "review",
+      "skill": "orch-review",
+      "script": "../../workflows/review.workflow.js",
+      "uses": [
+        "review-spec-standards",
+        "security-review"
+      ],
+      "runs": "subagent",
+      "tier": "deep",
+      "effort": "medium",
+      "execution": "parallel",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash"
+      ],
+      "notes": [],
+      "suggestion": {
+        "effort": "xhigh",
+        "reason": "risk high + review stage"
+      },
+      "model": "opus",
+      "read": [
+        "../orch-review/SKILL.md",
+        "../review-spec-standards/SKILL.md",
+        "../security-review/SKILL.md"
+      ],
+      "subagents": "1",
+      "deep": "1",
+      "label": "bugfix:review:<ticket>"
+    },
+    {
+      "id": "verify",
+      "skill": "verification-before-completion",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../verification-before-completion/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "finish",
+      "skill": "finishing-a-development-branch",
+      "uses": [
+        "pr"
+      ],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "gate": "finish",
+      "hooks": [
+        "pr-gate"
+      ],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../finishing-a-development-branch/SKILL.md",
+        "../pr/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "learn",
+      "skill": "retro",
+      "uses": [
+        "skill-coach"
+      ],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../retro/SKILL.md",
+        "../skill-coach/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    }
+  ],
+  "skipped": [],
+  "gates": [
+    {
+      "gate": "plan",
+      "label": "GATE 1",
+      "after": "failing-test"
+    },
+    {
+      "gate": "finish",
+      "label": "GATE 2",
+      "after": "finish"
+    }
+  ]
+}

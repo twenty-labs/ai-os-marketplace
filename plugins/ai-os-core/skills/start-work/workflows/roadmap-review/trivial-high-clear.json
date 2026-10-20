@@ -1,0 +1,88 @@
+{
+  "workflow": "roadmap-review",
+  "title": "Roadmap review",
+  "axes": {
+    "size": "trivial",
+    "risk": "high",
+    "ambiguous": false
+  },
+  "trivial": true,
+  "stages": [
+    {
+      "id": "progress",
+      "role": "project-manager",
+      "uses": [
+        "issue-workflow"
+      ],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../issue-workflow/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "replan",
+      "role": "product-owner",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "gate": "plan",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "apply",
+      "role": "project-manager",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Bash"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [],
+      "subagents": "0",
+      "deep": "0"
+    }
+  ],
+  "skipped": [],
+  "gates": [
+    {
+      "gate": "plan",
+      "label": "GATE 1",
+      "after": "replan"
+    }
+  ]
+}

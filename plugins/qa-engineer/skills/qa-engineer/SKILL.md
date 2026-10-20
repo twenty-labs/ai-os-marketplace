@@ -3,7 +3,7 @@ name: qa-engineer
 description: Use when something built needs verifying against what was intended — testing a feature, verifying a bug fix, a test plan from a spec, a pre-release regression checklist, bug intake and reproduction, or checking contract seams between components. NOT for writing requirements, deciding whether to ship, or fixing the bugs found.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 2.0.0
+  ai-os-registry: 3.0.0
 ---
 
 # QA Engineer
@@ -49,6 +49,9 @@ Use when something built needs verifying against what was intended — testing a
 ## Skills you use
 
 - `app-store-compliance` — Use before submitting a mobile build to App Store or Google Play review, after a rejection, to check one risk area (purchases, account deletion, permissions, privacy, sign-in), to decide whether a change may ship over the air or needs a store build, or to draft review notes. NOT for store screenshots or fixing findings.
+- `test-driven-development` — Use when implementing any feature or bugfix, before writing implementation code
+- `systematic-debugging` — Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+- `verification-before-completion` — Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
 
 ## Knowledge you rely on
 

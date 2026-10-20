@@ -1,0 +1,75 @@
+{
+  "workflow": "research",
+  "title": "Research",
+  "axes": {
+    "size": "small",
+    "risk": "critical",
+    "ambiguous": false
+  },
+  "trivial": false,
+  "stages": [
+    {
+      "id": "search",
+      "skill": "research-and-reuse",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash",
+        "WebSearch",
+        "WebFetch"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../research-and-reuse/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "recommend",
+      "skill": "research-and-reuse",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "gate": "plan",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../research-and-reuse/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "evaluate",
+      "rule": 0
+    }
+  ],
+  "gates": [
+    {
+      "gate": "plan",
+      "label": "GATE 1",
+      "after": "recommend"
+    }
+  ]
+}

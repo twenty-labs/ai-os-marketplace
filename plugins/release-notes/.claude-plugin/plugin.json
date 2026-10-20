@@ -1,0 +1,12 @@
+{
+  "name": "release-notes",
+  "description": "Use when drafting release notes and store copy (What's New) for a release from the changelog fragments of the pull requests merged since the last tag, in the project's notes language. The cut itself is release-cut. NOT for the changelog of a library, or for deciding what goes into a release.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "release-management"
+  ]
+}

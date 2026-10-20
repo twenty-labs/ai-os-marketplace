@@ -1,0 +1,79 @@
+{
+  "apiVersion": "ai-os.twentylabs.dev/v1",
+  "kind": "Workflow",
+  "metadata": {
+    "id": "research",
+    "title": "Research",
+    "description": "Research a question before building - what already exists in the repository, registries and on GitHub, what to adopt, extend or build - and report with sources."
+  },
+  "spec": {
+    "shortcut": true,
+    "changeTypes": [],
+    "requires": {
+      "knowledge": []
+    },
+    "stages": [
+      {
+        "id": "search",
+        "skill": "research-and-reuse",
+        "uses": [],
+        "runs": "main",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Bash",
+          "WebSearch",
+          "WebFetch"
+        ]
+      },
+      {
+        "id": "evaluate",
+        "skill": "research-and-reuse",
+        "uses": [],
+        "runs": "subagent",
+        "tier": "standard",
+        "effort": "medium",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob",
+          "Bash",
+          "WebSearch",
+          "WebFetch"
+        ]
+      },
+      {
+        "id": "recommend",
+        "skill": "research-and-reuse",
+        "uses": [],
+        "runs": "main",
+        "gate": "plan",
+        "hooks": [],
+        "tools": [
+          "Read",
+          "Grep",
+          "Glob"
+        ]
+      }
+    ],
+    "defaults": {
+      "when": [
+        {
+          "match": {
+            "size": [
+              "trivial",
+              "small"
+            ]
+          },
+          "skip": [
+            "evaluate"
+          ],
+          "set": {}
+        }
+      ]
+    }
+  }
+}

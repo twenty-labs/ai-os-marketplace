@@ -1,0 +1,54 @@
+{
+  "apiVersion": "ai-os.twentylabs.dev/v1",
+  "kind": "Workflow",
+  "metadata": {
+    "id": "triage",
+    "title": "Triage",
+    "description": "Take new issues from needs-triage to ready-for-agent or ready-for-human, with a type, a size, a risk and a blocked-by line."
+  },
+  "spec": {
+    "shortcut": false,
+    "changeTypes": [
+      "spike",
+      "decision"
+    ],
+    "requires": {
+      "knowledge": []
+    },
+    "stages": [
+      {
+        "id": "triage",
+        "skill": "issue-workflow",
+        "uses": [],
+        "runs": "main",
+        "hooks": [],
+        "tools": []
+      },
+      {
+        "id": "slice",
+        "skill": "to-tickets",
+        "uses": [],
+        "runs": "main",
+        "gate": "plan",
+        "hooks": [],
+        "tools": []
+      }
+    ],
+    "defaults": {
+      "when": [
+        {
+          "match": {
+            "size": [
+              "trivial",
+              "small"
+            ]
+          },
+          "skip": [
+            "slice"
+          ],
+          "set": {}
+        }
+      ]
+    }
+  }
+}

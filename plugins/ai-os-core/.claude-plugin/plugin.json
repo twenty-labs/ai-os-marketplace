@@ -1,0 +1,13 @@
+{
+  "name": "ai-os-core",
+  "description": "AI OS runtime: the start-work router, the registry workflows, their stage skills, the /feature and /bugfix shortcuts and the SessionStart line.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "runtime",
+    "workflow",
+    "router"
+  ]
+}

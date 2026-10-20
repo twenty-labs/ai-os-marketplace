@@ -1,6 +1,5 @@
 {
   "name": "ads",
-  "version": "2.0.0",
   "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms.",
   "author": {
     "name": "Twenty Labs"

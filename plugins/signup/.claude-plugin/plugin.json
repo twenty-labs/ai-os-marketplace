@@ -1,6 +1,5 @@
 {
   "name": "signup",
-  "version": "2.0.0",
   "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows.",
   "author": {
     "name": "Twenty Labs"

@@ -3,7 +3,7 @@ name: backend-engineer
 description: Use when an agreed issue needs implementing on the server — an endpoint or response field, a schema change, a background job or webhook, a data or content script, or an integration with a paid upstream API. NOT for client-side changes (mobile-engineer), reviewing someone else's diff (code-reviewer), or writing requirements (business-analyst).
 metadata:
   ai-os-kind: role
-  ai-os-registry: 2.0.0
+  ai-os-registry: 3.0.0
 ---
 
 # Backend Engineer
@@ -58,6 +58,10 @@ Use when an agreed issue needs implementing on the server — an endpoint or res
 - `security-review` — Use when a diff, branch or area needs a security review — authentication and authorization on every route, token issuance and refresh, purchases and entitlements (server-side receipts, webhook signatures and idempotency, promo, offer, gift and referral replay), file upload, injection, secrets in code, config or logs, personal data and minors' data, row-level security and storage policies, rate limits and cost abuse of paid upstream APIs, admin endpoints. Read-only: findings with file and line, severity and a concrete exploit or failure scenario. NOT for fixing what it finds (the engineer who owns the code), running attacks or scanners against production, general correctness review (code-reviewer), or a migration's lock and data-loss review (db-migration).
 - `ai-feature-eval` — Use when building, changing or questioning a feature built on a paid AI provider — LLM calls, speech recognition, pronunciation or speech scoring, text-to-speech, realtime voice: recording what each call costs, unit economics per active user, spend caps per user and globally, measuring quality on a held-out corpus (precision, recall, false-alarm rate), changing a prompt or model safely, probing a provider's real responses, latency and fallbacks, logging without personal data, or investigating one bad turn or session. NOT for product analytics events (analytics-instrumentation), pricing the product to users (pricing), a security review of the paid routes (security-review), or deciding whether the feature should exist (product-owner).
 - `workspace-hygiene` — Use when asked whether the local checkout is clean or in sync, before a release or a new batch of work, after merging several pull requests, or when clones, worktrees and branches have piled up — syncing every clone, listing and safely pruning merged worktrees and branches, checking each trunk against its remote, finding environment keys that drifted from the example files, and spotting agent-config drift (duplicate skill copies, .claude versus .agents) to hand to ai-os doctor and ai-os check. Report first; nothing is removed without the owner's yes. NOT for starting or submitting one issue's worktree (issue-workflow), a release cut (release), or fixing the agent configuration itself (ai-os doctor and ai-os sync).
+- `test-driven-development` — Use when implementing any feature or bugfix, before writing implementation code
+- `systematic-debugging` — Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+- `verification-before-completion` — Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
+- `receiving-code-review` — Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation
 
 ## Knowledge you rely on
 

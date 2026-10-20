@@ -1,0 +1,12 @@
+{
+  "name": "orch-review",
+  "description": "Run a multi-dimension, adversarially verified review of a diff: one reviewer per dimension in parallel, findings deduplicated by evidence, every CRITICAL or HIGH finding tried by an independent skeptic. Returns blocking and advisory findings and fails closed.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "code-review"
+  ]
+}

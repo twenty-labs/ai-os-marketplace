@@ -1,0 +1,12 @@
+{
+  "name": "retro",
+  "description": "Conduct a retrospective on a coding session and propose improvements to the agent environment.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "process-analysis"
+  ]
+}

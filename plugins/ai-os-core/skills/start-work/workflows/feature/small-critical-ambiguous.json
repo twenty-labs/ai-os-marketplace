@@ -1,0 +1,196 @@
+{
+  "workflow": "feature",
+  "title": "Feature",
+  "axes": {
+    "size": "small",
+    "risk": "critical",
+    "ambiguous": true
+  },
+  "trivial": false,
+  "stages": [
+    {
+      "id": "plan",
+      "skill": "writing-plans",
+      "uses": [
+        "to-tickets"
+      ],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "gate": "plan",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "suggestion": {
+        "effort": "xhigh",
+        "reason": "risk critical + plan stage"
+      },
+      "model": "sonnet",
+      "read": [
+        "../writing-plans/SKILL.md",
+        "../to-tickets/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "implement",
+      "skill": "subagent-driven-development",
+      "uses": [
+        "test-driven-development",
+        "using-git-worktrees"
+      ],
+      "runs": "subagent",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "sequential",
+      "isolation": "worktree",
+      "hooks": [
+        "post-edit-quality"
+      ],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Edit",
+        "Write",
+        "Bash"
+      ],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../subagent-driven-development/SKILL.md",
+        "../test-driven-development/SKILL.md",
+        "../using-git-worktrees/SKILL.md"
+      ],
+      "subagents": "1 per ticket",
+      "deep": "0",
+      "label": "feature:implement:<ticket>"
+    },
+    {
+      "id": "review",
+      "skill": "orch-review",
+      "script": "../../workflows/review.workflow.js",
+      "uses": [
+        "review-spec-standards",
+        "security-review"
+      ],
+      "runs": "subagent",
+      "tier": "deep",
+      "effort": "medium",
+      "execution": "parallel",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash"
+      ],
+      "notes": [],
+      "suggestion": {
+        "effort": "xhigh",
+        "reason": "risk critical + review stage"
+      },
+      "model": "opus",
+      "read": [
+        "../orch-review/SKILL.md",
+        "../review-spec-standards/SKILL.md",
+        "../security-review/SKILL.md"
+      ],
+      "subagents": "1",
+      "deep": "1",
+      "label": "feature:review:<ticket>"
+    },
+    {
+      "id": "verify",
+      "skill": "verification-before-completion",
+      "uses": [],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../verification-before-completion/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "finish",
+      "skill": "finishing-a-development-branch",
+      "uses": [
+        "pr"
+      ],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "gate": "finish",
+      "hooks": [
+        "pr-gate"
+      ],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../finishing-a-development-branch/SKILL.md",
+        "../pr/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    },
+    {
+      "id": "learn",
+      "skill": "retro",
+      "uses": [
+        "skill-coach"
+      ],
+      "runs": "main",
+      "tier": "standard",
+      "effort": "medium",
+      "execution": "inline",
+      "isolation": "none",
+      "hooks": [],
+      "tools": [],
+      "notes": [],
+      "model": "sonnet",
+      "read": [
+        "../retro/SKILL.md",
+        "../skill-coach/SKILL.md"
+      ],
+      "subagents": "0",
+      "deep": "0"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "research",
+      "rule": 1
+    },
+    {
+      "id": "brainstorm",
+      "rule": 1
+    }
+  ],
+  "gates": [
+    {
+      "gate": "plan",
+      "label": "GATE 1",
+      "after": "plan"
+    },
+    {
+      "gate": "finish",
+      "label": "GATE 2",
+      "after": "finish"
+    }
+  ]
+}
