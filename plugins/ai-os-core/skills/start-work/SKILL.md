@@ -3,7 +3,7 @@ name: start-work
 description: "Use FIRST, before any other tool or skill, whenever the user asks to build, change, fix, release or research something in this repository — even small fixes. Classifies the task, checks prerequisites and shows the plan card (a trivial task: one status line) before work starts."
 metadata:
   ai-os-kind: router
-  ai-os-registry: 3.1.0
+  ai-os-registry: 3.2.0
 ---
 
 # start-work: the router

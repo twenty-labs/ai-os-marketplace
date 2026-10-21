@@ -5,7 +5,7 @@ disable-model-invocation: true
 metadata:
   ai-os-kind: shortcut
   ai-os-workflow: feature
-  ai-os-registry: 3.1.0
+  ai-os-registry: 3.2.0
 ---
 
 # /feature: Feature workflow

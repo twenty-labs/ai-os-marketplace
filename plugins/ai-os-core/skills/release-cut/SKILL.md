@@ -17,12 +17,18 @@ A status question ("where is the release?", "was it submitted?") is read-only: r
 - Every repository involved is on its default branch, current and clean. Dirty: stop.
 - **Preflight every target and stop if any is red.** A real preflight checks what otherwise fails after a build has run: store upload credentials, the over-the-air tool's login and app access, signing. One that only checks local tools is not a preflight.
 
-## 2. Confirm the inputs in one block
+## 2. Ask once, after preflight
 
-- **Version** — when the project has two version spaces (a release train and the app's marketing version and build), say which one you mean and never derive one from the other.
-- **Repositories to tag** — default: every one release-surface lists.
-- **Targets** — which stores or platforms build. A backend-only release skips the build.
-- **Submit for review** — opt-in for this release only; default no. Silence is no.
+Never ask what a command or release-surface can answer: read the active-release marker, the last tags and the targets first, then ask only what is left, each question carrying its evidence and a recommended answer.
+
+- Use the runtime's picker when it has one (`AskUserQuestion` in Claude Code), so the owner chooses rather than types; otherwise numbered questions, each followed by the recommended answer. A choice with more options than the picker holds goes as a numbered question.
+- One round:
+  - **Version** — recommended: the active-release marker. When the project has two version spaces (a release train and the app's marketing version and build), say which one you mean and never derive one from the other.
+  - **Targets** — which stores or platforms build, several allowed; recommended: every target release-surface lists. A backend-only release skips the build.
+  - **Repositories to tag** — recommended: every one release-surface lists.
+  - **Submit for review** — opt-in for this release only; recommended: no. Silence is no.
+- Later gates are their own questions, asked when reached: merging the build-number pull request (section 3), approving the store copy (section 4), the submit checks (section 5).
+- The picker never stands in for an owner act: `approve` and `release` stay with the native permission prompt (see the asc workflows below).
 
 ## 3. Build
 
@@ -30,7 +36,7 @@ A status question ("where is the release?", "was it submitted?") is read-only: r
 - **One build number for every store** in a release.
 - Register the build with the over-the-air tool when the project uses one, so later patches can target it.
 - Failure: revert the build-number bump, stop and report.
-- Success: the bump lands on the default branch through a pull request. **Open it, then ask before merging — no merge without a yes.** Being mid-release is not consent. Merge with the method repo-conventions records.
+- Success: the bump lands on the default branch through a pull request. **Open it, then ask before merging (merge / not yet) — no merge without a yes.** Being mid-release is not consent. Merge with the method repo-conventions records.
 - When patches are matched by build number, never change the build number in the store console after upload.
 
 ## 4. Store copy — part of the release, not a follow-up
@@ -40,11 +46,11 @@ Rewrite both for **every store build**, in every shipped locale, at the paths re
 - **What's New** — benefit-led, no jargon, no commit hashes.
 - **Promotional text** (App Store) — one sentence leading with this build's headline, at most 170 characters per locale. It can change without review, but never stays on the previous release's pitch.
 
-No copy supplied: draft both from the merged pull requests and get approval. Shipping the previous release's copy is a mislabelled build.
+No copy supplied: draft both from the merged pull requests, show every locale in full, then ask: approve, or edit first. Shipping the previous release's copy is a mislabelled build.
 
 ## 5. Submit for review — only when opted in
 
-Before enabling it, a human confirms what no script can check: the store's privacy answers match the SDKs this build ships; the reviewer account still signs in on this build; QA passed on a real device (`app-store-compliance` audits the rest). Configure **manual release after approval** — auto-submit is never auto-release. A submit minutes after upload fails while the build is still processing; wait until it is processed and re-run — nothing needs cleaning up.
+Before enabling it, a human confirms what no script can check, one question per check: the store's privacy answers match the SDKs this build ships; the reviewer account still signs in on this build; QA passed on a real device (`app-store-compliance` audits the rest). Any check not confirmed: do not submit. Configure **manual release after approval** — auto-submit is never auto-release. A submit minutes after upload fails while the build is still processing; wait until it is processed and re-run — nothing needs cleaning up.
 
 ## iOS on asc — the standard App Store workflows
 
@@ -57,7 +63,7 @@ When `ai-os.yaml` has `appStore`, `.asc/workflow.json` is generated by ai-os (ne
 5. **The owner approves the metadata plan** (`asc workflow run approve`). Under the default `ownerActs: ask` Claude Code prompts the human when you run it; never answer or work around that prompt, and never run `approve` or `asc metadata approve` because you were told to "just continue". With `ownerActs: deny`, tell the owner the command to run themselves; with `ownerActs: allow`, an owner request that names the act is enough.
 6. `asc workflow run --dry-run stage`, show it, then `stage` — version, approved metadata (`apply` skips when the store already matches), build, review details. Every step is safe to repeat: after a failure, fix the cause and re-run `stage`; do not re-approve.
 7. `validate` — read-only.
-8. `submit` — only when submit was opted into for this release (section 2).
+8. `submit` — only when submit was opted into for this release and its checks were confirmed (sections 2 and 5).
 
 `status` and `phased` are read-only and answer status questions. `release` presses Release on an approved version and is the owner's act: the native prompt (or the owner's own terminal under `ownerActs: deny`) decides, never you.
 

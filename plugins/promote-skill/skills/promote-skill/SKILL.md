@@ -17,11 +17,15 @@ Promotion moves a skill into the shared registry through a reviewed pull request
    ```
 
    - Done when the command reports the plan without errors. Fix every error first: a secret, an internal hostname, a personal path or an email in the skill must be removed; a license outside MIT, Apache-2.0, BSD-2-Clause, BSD-3-Clause, ISC or CC-BY-4.0 stops an external skill.
-   - Roles: promoted skills attach to the roles that need them. Without `--role` the command lists suggested roles; pass the ones the owner picks, or `--opt-in` to leave the skill for repositories to enable by hand.
+   - Roles: promoted skills attach to the roles that need them. Without `--role` the command lists suggested roles: ask the owner to pick (several allowed), or `--opt-in` to leave the skill for repositories to enable by hand. Recommend the roles whose work the skill's description names.
    - Warnings about the description ("Use when ... NOT for ...") or size are the contribution standard talking: fix them in the source and run the dry run again.
-3. **Show the owner** the file list, the roles, the warnings, and this sentence: the content of the skill becomes public. Wait for a clear yes. A silent or ambiguous answer is a no.
+3. **Show the owner** the file list, the roles, the warnings, and this sentence: the content of the skill becomes public. Then ask: open the public pull request, or not now. Wait for a clear yes. A silent or ambiguous answer, or a free-text reply that is not a yes, is a no.
 4. **Promote.** Run the same command with `--yes` instead of `--dry-run`. The command runs `gh` and `git` as the account named by policy `github-account` (or `--gh-account`); never switch accounts yourself, and stop and tell the owner if the token lookup fails.
 5. **Report** the pull request URL and, when the skill came from this repository's `.ai-os/skills`, that the local copy was removed. The skill reaches this repository through the next registry upgrade.
+
+## Asking
+
+Ask only what the dry run cannot answer: the roles, and the yes in step 3. Use the runtime's picker when it has one (`AskUserQuestion` in Claude Code), so the owner chooses rather than types; otherwise numbered questions, each followed by the recommended answer. More suggested roles than the picker holds: list them as a numbered question. The checkout path and the source are typed answers: ask for them plainly.
 
 ## Rules
 
