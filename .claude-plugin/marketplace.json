@@ -4,8 +4,8 @@
     "name": "Twenty Labs"
   },
   "metadata": {
-    "description": "Twenty Labs AI OS roles and skills (registry 3.2.0)",
-    "version": "3.2.0"
+    "description": "Twenty Labs AI OS roles and skills (registry 3.3.0)",
+    "version": "3.3.0"
   },
   "plugins": [
     {
@@ -25,6 +25,12 @@
       "source": "./plugins/ads",
       "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms.",
       "category": "external-skill"
+    },
+    {
+      "name": "ads-readiness",
+      "source": "./plugins/ads-readiness",
+      "description": "Check whether an app is ready for paid acquisition before the first campaign, a new market or more spend: measurement, revenue attribution, billing, legal, store page, first run, stability. Read-only; returns a verdict, blockers and next actions.",
+      "category": "skill"
     },
     {
       "name": "ads-review",

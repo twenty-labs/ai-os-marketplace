@@ -5,7 +5,7 @@ disable-model-invocation: true
 metadata:
   ai-os-kind: shortcut
   ai-os-workflow: release
-  ai-os-registry: 3.2.0
+  ai-os-registry: 3.3.0
 ---
 
 # /release: Release workflow

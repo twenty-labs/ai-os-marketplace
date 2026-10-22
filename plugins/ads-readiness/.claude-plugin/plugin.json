@@ -1,0 +1,13 @@
+{
+  "name": "ads-readiness",
+  "description": "Check whether an app is ready for paid acquisition before the first campaign, a new market or more spend: measurement, revenue attribution, billing, legal, store page, first run, stability. Read-only; returns a verdict, blockers and next actions.",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "paid-acquisition",
+    "growth-analytics"
+  ]
+}

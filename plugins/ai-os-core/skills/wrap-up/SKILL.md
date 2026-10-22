@@ -4,7 +4,7 @@ description: "User-typed: close the session. Reports state, proposes follow-ups 
 disable-model-invocation: true
 metadata:
   ai-os-kind: wrap-up
-  ai-os-registry: 3.2.0
+  ai-os-registry: 3.3.0
 ---
 
 # /wrap-up: close the session
@@ -23,7 +23,8 @@ default thread: the issue number from the branch name, else the branch, else a s
 3. **Decisions and knowledge**: decisions that belong in an ADR or the decision log, knowledge slots as `draft`, GLOSSARY.
    Run `ai-os handoff memory`: it lists facts that live only in an account's memory (not in the shared store). Propose
    exporting each to the repository (knowledge slot, ADR or issue); the user decides.
-4. **Learn**: retro, skill-coach, `ai-os skill promote`, permissions suggestions, when the session earned them.
+4. **Learn**: retro, skill-coach, `ai-os skill promote`, permissions suggestions, when the session earned them. When the
+   session ran a repeatable multi-step process no existing skill covers, propose `/skill-from-session`.
 5. **Usage**: `ai-os usage --since 1d --repo .` for the session.
 6. **Handoff** (below).
 
