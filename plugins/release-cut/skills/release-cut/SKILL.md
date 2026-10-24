@@ -11,6 +11,8 @@ A release is cut from a known commit, built once, tagged where it shipped and de
 
 A status question ("where is the release?", "was it submitted?") is read-only: report and stop.
 
+**When `ai-os.yaml` has `release:`, ai-os is the tooling** for preflight, build and tag: `ai-os release preflight <env> --mode release` (section 1), then `ai-os release cut <env> <ios|android|both>` and show its plan; add `--apply` only after the owner's yes (the guard asks). It builds with the project's `releaseCmd` in a throwaway worktree, commits the build-number bump on the trunk, creates the annotated `released/<version>` tag and writes `releases/<version>.md` (sections 3 and 6); it never uploads or submits. Then push the trunk and the tag it names, and upload with the project's own tooling. `ai-os release contracts` says whether a cross-repository contract moved on one side only.
+
 ## 1. Preconditions
 
 - What ships is agreed: the release's items are done and a changelog source exists.
@@ -86,3 +88,5 @@ Build numbers uploaded · review status (not submitted: what a human must still 
 ## Over-the-air patches
 
 Only what the over-the-air tool can replace ships as a patch. Asset, native, permission or SDK changes and new user-facing features need a store build (store-review's policy; `app-store-compliance` decides unclear cases). A patch is built from the release's tag with the same environment as the release, goes to a staging track, is verified on a physical device, then promoted. Patches never move the version gate.
+
+When `ai-os.yaml` has `release:`, cut the patch with `ai-os release patch <env> <platform> --pick <PR numbers>` and show the plan; add `--apply` only after the owner's yes (the guard asks). Picks come from `ai-os release status`; a Store or unfragmented item, or one an earlier patch shipped, is refused. A coupled pick (its backend side must deploy first) needs `--backend-deployed`, passed only once that backend is live. The second platform of the same patch is `--reship <patch tag>`. Push the new `.patch<N>` tag the command names.

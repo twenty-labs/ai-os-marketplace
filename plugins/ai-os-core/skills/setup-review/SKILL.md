@@ -4,7 +4,7 @@ description: "User-typed: scan this repository and recommend registry roles, ski
 disable-model-invocation: true
 metadata:
   ai-os-kind: setup-review
-  ai-os-registry: 3.3.0
+  ai-os-registry: 3.4.0
 ---
 
 # /setup-review: what else the registry offers this repository
@@ -35,13 +35,20 @@ never edits product code.
    the run).
 6. **Apply the picks.**
    - **Enable** a role, skill or plugin: add it to `ai-os.yaml` (`roles`, `skills.include`, `plugins.include`), then
-     run `ai-os sync` once for all of them.
+     run `ai-os sync` once for all of them. An `mcp` item goes into `mcp:` (ask the owner for every required param,
+     such as Supabase's `projectRef`; never invent a project ref). The `direnv` block is `direnv: true`: after
+     `ai-os sync`, run `ai-os envrc` (a dry run) to get the suggested GitHub account, confirm it with the owner in one
+     `AskUserQuestion` (suggested first, Recommended), then `ai-os envrc --gh-account <login> --write` and report its
+     next steps. The tokens are the owner's to fill: never fill a token, never run `direnv allow`.
    - **Migrate** (a picked overlap): do not change `ai-os.yaml` for that job. Draft one migration issue: the steps, what stays, and done criteria that include rewriting those knowledge
      sections to the registry's way. For `app-store` the issue lists: add the `appStore` block to `ai-os.yaml` (the
      app id from `fastlane/Appfile` or the iOS config when a numeric id is there, else ask the owner; the asc
      credential profile), `asc metadata pull` from the live store into `appstore/metadata` and drop
      `fastlane/metadata`, switch the script's App Store Connect steps to the asc workflows, and keep what the overlap's
-     `keep` lists.
+     `keep` lists. For `release-kit` (agent-workspace-kit) the issue lists: `ai-os release from-kit --write`, then
+     fix the env names it reports; `ai-os release preflight <env> --mode release`, then `ai-os release cut <env> both` and
+     `ai-os release patch <env> <platform> --pick …` as dry runs; rewrite `release-surface` to the `ai-os release`
+     commands; remove the kit pieces `from-kit` lists; done after one real patch and one real store cut through ai-os.
    - A second `AskUserQuestion` before opening any issue: open them (Recommended), or keep the drafts in chat.
    - Then, at the top of each knowledge section a migration plan names, add
      `> Migrating to <registry way>, tracked in #<n>. Until it closes, <old path> is still the way.` with the opened

@@ -17,6 +17,8 @@ description: Use when a store build has been approved, released or rolled out an
 | The in-app update gate (latest build, mode, changelog, store link) | The only way installed apps learn the build exists. |
 | The project's other post-release commands | Whatever else this project moves at go-live. |
 
+When `ai-os.yaml` has `release:`, the go-live command is `ai-os release live <version> --platform <ios|android|both>`: without `--apply` it is the report (note, Status line before and after, tag on origin, mirror, post-release steps); with `--apply` (and `--post` for `release.postRelease`) it rewrites the note's Status line, pushes the tag and runs those steps, after the owner's yes (the guard asks). It never merges a mirror branch: merge the tag by hand once every platform is live.
+
 **Use the project's go-live command when release-surface names one** — it is where the guards live; never hand-edit what it owns. Without one, apply the rules below by hand and print every record before and after.
 
 ## Report first, always
