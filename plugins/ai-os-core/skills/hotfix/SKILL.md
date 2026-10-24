@@ -5,7 +5,7 @@ disable-model-invocation: true
 metadata:
   ai-os-kind: shortcut
   ai-os-workflow: hotfix
-  ai-os-registry: 3.4.0
+  ai-os-registry: 3.5.0
 ---
 
 # /hotfix: Hotfix workflow

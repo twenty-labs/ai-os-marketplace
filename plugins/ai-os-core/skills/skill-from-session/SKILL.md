@@ -4,7 +4,7 @@ description: "User-typed: package a workflow from this session into a registry s
 disable-model-invocation: true
 metadata:
   ai-os-kind: skill-from-session
-  ai-os-registry: 3.4.0
+  ai-os-registry: 3.5.0
 ---
 
 # /skill-from-session: package this session's workflow for every repository

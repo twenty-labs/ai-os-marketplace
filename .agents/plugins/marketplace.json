@@ -4,8 +4,8 @@
     "name": "Twenty Labs"
   },
   "metadata": {
-    "description": "Twenty Labs AI OS roles and skills (registry 3.4.0)",
-    "version": "3.4.0"
+    "description": "Twenty Labs AI OS roles and skills (registry 3.5.0)",
+    "version": "3.5.0"
   },
   "plugins": [
     {
