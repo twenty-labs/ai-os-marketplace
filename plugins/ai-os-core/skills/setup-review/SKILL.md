@@ -4,7 +4,7 @@ description: "User-typed: scan this repository and recommend registry roles, ski
 disable-model-invocation: true
 metadata:
   ai-os-kind: setup-review
-  ai-os-registry: 3.5.0
+  ai-os-registry: 3.5.1
 ---
 
 # /setup-review: what else the registry offers this repository

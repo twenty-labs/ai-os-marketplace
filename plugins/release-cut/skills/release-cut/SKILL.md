@@ -38,7 +38,7 @@ Never ask what a command or release-surface can answer: read the active-release 
 - **One build number for every store** in a release.
 - Register the build with the over-the-air tool when the project uses one, so later patches can target it.
 - Failure: revert the build-number bump, stop and report.
-- Success: the bump lands on the default branch through a pull request. **Open it, then ask before merging (merge / not yet) — no merge without a yes.** Being mid-release is not consent. Merge with the method repo-conventions records.
+- Success: the bump lands on the default branch through a pull request. **Open it, then ask before merging (merge / not yet) — no merge without a yes.** Being mid-release is not consent. Merge with the method repo-conventions records. When ai-os made the tag, merge that pull request yourself with a merge commit once the owner says yes (`gh pr merge <n> --merge`): a squash gives the trunk a new SHA and orphans the tag. If it was squashed anyway, `ai-os release status` warns, `ai-os release live` refuses, and `ai-os release retag <version>` shows the trunk commit that carries the version and what differs; with `--apply` (owner act, the guard asks) it moves the tag and pushes it with a lease on the old one.
 - When patches are matched by build number, never change the build number in the store console after upload.
 
 ## 4. Store copy — part of the release, not a follow-up

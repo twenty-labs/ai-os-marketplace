@@ -4,7 +4,7 @@ description: "User-typed: continue from a handoff written by /wrap-up (no argume
 disable-model-invocation: true
 metadata:
   ai-os-kind: handoff
-  ai-os-registry: 3.5.0
+  ai-os-registry: 3.5.1
 ---
 
 # /handoff: continue from a handoff

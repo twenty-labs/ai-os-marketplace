@@ -4,7 +4,7 @@ description: "User-typed: close the session. Reports state, proposes follow-ups 
 disable-model-invocation: true
 metadata:
   ai-os-kind: wrap-up
-  ai-os-registry: 3.5.0
+  ai-os-registry: 3.5.1
 ---
 
 # /wrap-up: close the session

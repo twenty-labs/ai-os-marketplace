@@ -1,5 +1,5 @@
 {
-  "registry": "3.5.0",
+  "registry": "3.5.1",
   "workflows": [
     {
       "id": "bugfix",
