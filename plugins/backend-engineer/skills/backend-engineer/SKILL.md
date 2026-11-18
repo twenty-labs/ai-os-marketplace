@@ -3,7 +3,7 @@ name: backend-engineer
 description: Use when an agreed issue needs implementing on the server — an endpoint or response field, a schema change, a background job or webhook, a data or content script, or an integration with a paid upstream API. NOT for client-side changes (mobile-engineer), reviewing someone else's diff (code-reviewer), or writing requirements (business-analyst).
 metadata:
   ai-os-kind: role
-  ai-os-registry: 3.5.2
+  ai-os-registry: 3.6.0
 ---
 
 # Backend Engineer
@@ -65,7 +65,7 @@ Use when an agreed issue needs implementing on the server — an endpoint or res
 
 ## Knowledge you rely on
 
-- `.ai-os/knowledge/stack-conventions.md` — The per-stack facts an implementer needs to change code that passes this project's gates: the build, test, lint and codegen commands, paths that are generated and never hand-edited, enforced architecture rules, the call-site rules for UI, localization and analytics, how environment files are split, what forces a store build, and where the definition of done is written. Branches, merging, sync and languages live in repo-conventions.
+- `.ai-os/knowledge/stack-conventions.md` — The per-stack facts an implementer needs to change code that passes this project's gates: the build, test, lint and codegen commands, paths that are generated and never hand-edited, enforced architecture rules, the call-site rules for UI, localization and analytics, how environment files are split and where that split is enforced, what forces a store build, and where the definition of done is written. Branches, merging, sync and languages live in repo-conventions.
 - `.ai-os/knowledge/repo-conventions.md` — The working conventions an agent needs to create branches, commits, issues and pull requests that fit this project, and the commands that keep local clones in sync.
 - `.ai-os/knowledge/flow-map.md` — Where each major product flow lives — the code that implements it, the state that persists it, and the contract it sits inside. A map, not a source of truth: the code and tables win.
 - `.ai-os/knowledge/test-surface.md` — What test infrastructure exists, how to run it, which environments are safe to write to, and where the known holes are.

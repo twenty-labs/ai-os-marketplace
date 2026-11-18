@@ -3,7 +3,7 @@ name: start-work
 description: "Use FIRST, before any other tool or skill, whenever the user asks to build, change, fix, release or research something in this repository — even small fixes. Classifies the task, checks prerequisites and shows the plan card (a trivial task: one status line) before work starts."
 metadata:
   ai-os-kind: router
-  ai-os-registry: 3.5.2
+  ai-os-registry: 3.6.0
 ---
 
 # start-work: the router
@@ -183,12 +183,16 @@ do not wait, and record each pre-approved item as one line, for example "GATE 1:
 - A stage with `script` (the review stage): do not spawn per-ticket agents. Compute the diff and the changed files in
   this conversation (the diff of the work against its base, and the names of the changed files; an empty diff ends the
   stage with "Nothing to review."), then call the Workflow tool on the script (its path is relative to this skill's
-  directory) with `{"diff": ..., "language": "<dominant language>", "changedFiles": [...], "spec": "<spec text, if any>", "model":
-  "<the plan's model>", "effort": "<the plan's effort>", "label": "<workflow>:<stage>:-"}` (the plan card's model, effort
-  and usage label, which the script applies to every reviewer and verifier).
+  directory) with `{"diff": ..., "worktree": "<absolute path of the working tree that holds the change>", "language":
+  "<dominant language>", "changedFiles": [...], "spec": "<spec text, if any>", "model": "<the plan's model>", "effort":
+  "<the plan's effort>", "label": "<workflow>:<stage>:-"}` (the plan card's model, effort and usage label, which the
+  script applies to every reviewer and verifier). Pass the whole diff, never truncated or summarised, and the worktree
+  even when it is the current directory: reviewers do not run in your working directory.
   It runs the reviewers in parallel, deduplicates by evidence and tries every CRITICAL or HIGH finding with an
-  adversarial verifier that defaults to refuted. Show `blocking` and `advisory` to the human; `incomplete` or a
-  failed script is never an approval.
+  adversarial verifier that defaults to refuted. Each reviewer reports what it read; one that skipped changed files is
+  listed in `incompleteDimensions`, and `dimensions` separates `no-findings` (a full review that found nothing) from
+  `no-output`. Show `blocking`, `advisory` and any incomplete dimensions to the human; an `INCOMPLETE` verdict,
+  `incomplete: true` or a failed script is never an approval.
 - `execution: parallel` on a ticket stage (implement): read `references/frontier.md` and follow it.
 - **Every Agent call you make passes both `model` and `effort`** from the plan (the stage or ticket row), the
   research and knowledge stages included, next to the usage label. A subagent that gets neither inherits the main

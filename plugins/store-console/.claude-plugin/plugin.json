@@ -1,0 +1,12 @@
+{
+  "name": "store-console",
+  "description": "Use when an App Store Connect or Play Console chore comes up — submitting a version together with first-time subscriptions, attaching subscriptions or their group to a review, the Play Data safety form, reading Play Console state (managed publishing, changes not sent for review, target audience), or anything that looks like it needs the console in a browser. Checks the asc and Google Play APIs first and drives a browser only where no API exists. NOT for cutting or uploading a build (release-cut), App Store listing copy (aso-ops) or policy review of the app (app-store-compliance).",
+  "author": {
+    "name": "Twenty Labs"
+  },
+  "keywords": [
+    "ai-os",
+    "skill",
+    "release-management"
+  ]
+}

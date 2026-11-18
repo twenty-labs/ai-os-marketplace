@@ -5,7 +5,7 @@ disable-model-invocation: true
 metadata:
   ai-os-kind: shortcut
   ai-os-workflow: qa
-  ai-os-registry: 3.5.2
+  ai-os-registry: 3.6.0
 ---
 
 # /qa: QA workflow

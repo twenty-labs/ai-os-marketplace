@@ -4,7 +4,7 @@
   "metadata": {
     "id": "triage",
     "title": "Triage",
-    "description": "Take new issues from needs-triage to ready-for-agent or ready-for-human, with a type, a size, a risk and a blocked-by line."
+    "description": "Take new issues from needs-triage to ready-for-agent or ready-for-human, with a type, a size, a risk, a priority and a blocked-by line."
   },
   "spec": {
     "shortcut": false,

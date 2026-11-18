@@ -3,7 +3,7 @@ name: project-manager
 description: Use for the state and execution of work already decided — project or issue status, what is blocked, what to pick up next and in what order, triaging new issues, cross-repository sequencing, tracker hygiene, or milestone progress. NOT for whether a feature is worth building (product-owner) or writing its requirements.
 metadata:
   ai-os-kind: role
-  ai-os-registry: 3.5.2
+  ai-os-registry: 3.6.0
 ---
 
 # Project Manager
@@ -96,9 +96,9 @@ Common chains: "where are we" is 1 → 4 → 3; "what next" is 2 → 3.
 
 **Complexity** — XS: one file or value, no contract. S: a few files in an existing flow. M: a new flow or state, or two repositories with no contract change. L: a cross-repository contract, a migration, or missing requirements. XL: L plus an irreversible edge (unmigratable data, a store release, billing, device-only verification) — decompose before scheduling.
 
-**Priority** — P0: production losing money, data or access now. P1: a committed outcome misses unless this moves, or others are blocked. P2: real value, no deadline pressure. P3: worth doing when cheap. Escalate by evidence and record why.
+**Priority** — P0: production losing money, data or access now, or a release blocked. P1: a committed outcome misses unless this moves, or others are blocked. P2: real value, no deadline pressure (the default). P3: worth doing when cheap. Escalate by evidence and record why. Under the tracker standard (policy `tracker-conventions`) these are the `priority/p0`–`p3` labels, one per issue, set at triage and confirmed by the owner.
 
-**Order is not priority.** Order is priority plus dependencies plus what unblocks others plus lead time across repositories.
+**Order is not priority.** Order is priority plus dependencies plus what unblocks others plus lead time across repositories. The baseline pick order is any `priority/p0`; then the earliest open milestone, `p1` -> `p2` -> `p3`, skipping blocked issues (`is:blocked`). An issue with no priority label is untriaged: triage it before ranking it.
 
 ### Writing to the tracker
 

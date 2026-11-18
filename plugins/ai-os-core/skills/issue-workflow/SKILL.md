@@ -28,7 +28,7 @@ Every tracker call runs as the account tracker-surface names, in its per-command
 Steps:
 
 1. **Resolve the repository** from the tracker-surface repository table — never derive the owner from a folder name. A change that must land in two repositories together is one issue per repository, cross-linked in both bodies.
-2. **Confirm in one block**: title (you draft it, in the conventions' title language), one-line scope, type, priority, release. Anything the owner already said counts as given. **Never guess priority.** Release defaults to the active-release marker the conventions name. Wait for a yes.
+2. **Confirm in one block**: title (you draft it, in the conventions' title language), one-line scope, type, priority, release. Anything the owner already said counts as given. **Never guess priority.** Where the project uses the tracker standard (policy `tracker-conventions`), priority is one `priority/p0`–`p3` label: p0 live users broken or a release blocked, p1 must land in the current milestone, p2 the default, p3 backlog. Release defaults to the active-release marker the conventions name. Wait for a yes.
 3. **Create** with the body template; every section present — write "N/A — <why>" rather than dropping one.
 4. **Add to the board and set fields.** Resolve field and option identifiers at runtime; identifiers in knowledge are a cache, not the truth. If a needed option does not exist (a new release), say so and stop: creating options is the owner's call.
 5. **Verify by the board item id** the add returned, never by issue number: list commands cut the newest items first, and numbers collide across repositories. Report the verified line.
@@ -53,7 +53,7 @@ repo-conventions may add sections; keep these four.
 ## start
 
 1. **Sync** every repository involved (the conventions' sync command, or fetch). A repository not cloned here is reported as skipped, not as an error.
-2. **Pick** — skip when the caller already fixed the issue. Otherwise list open issues in three groups, in this order: assigned to me, unassigned, assigned to someone else (with the handle). Filters sort; they never hide. Narrowing to one bucket makes the list read "no work left" while issues sit open. If nothing fits, run **create**.
+2. **Pick** — skip when the caller already fixed the issue. Otherwise list open issues in three groups, in this order: assigned to me, unassigned, assigned to someone else (with the handle). Within a group, order by priority: any `priority/p0` first; then the earliest open milestone, `p1` -> `p2` -> `p3`; skip blocked issues (`is:blocked`, or an open "blocked by"). An issue with no `priority/*` label is not triaged yet: say so, do not rank it by guess. Filters sort; they never hide. Narrowing to one bucket makes the list read "no work left" while issues sit open. If nothing fits, run **create**.
 3. **Guard** — closed, or assigned to someone else: warn and confirm.
 4. **Make the issue the source of truth before code.** Thin scope or criteria: update the body and confirm. Independently shippable extra work becomes a new linked issue, not a bigger one. User-facing work lists its analytics events.
 5. **Assign yourself** and move the card to in progress (same runtime identifier resolution).
@@ -84,7 +84,7 @@ The lead's routing pass. It never starts work.
 3. Route by "Team and routing" in tracker-surface. Resolve the live member list at runtime; for a member not in the table, ask the lead for their leaning instead of guessing. Assign only real members.
 4. **A feature that spans layers is one unit with one owner**, chosen by where most of the effort sits. Linked issues already split across layers go to the same owner, so a contract and its consumer move together. Genuinely balanced: ask.
 5. **Propose the whole table** — repository · # · title · leaning · assignee · why — and wait for the lead's OK.
-6. Apply assignments and correct area and priority. **Leave status in the first column**: the assignee moves it when they start.
+6. Apply assignments and correct area and priority (one `priority/*` label under the tracker standard, set or confirmed by the lead). **Leave status in the first column**: the assignee moves it when they start.
 7. Report the final table.
 
 ## Records

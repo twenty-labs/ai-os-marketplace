@@ -4,8 +4,8 @@
     "name": "Twenty Labs"
   },
   "metadata": {
-    "description": "Twenty Labs AI OS roles and skills (registry 3.5.2)",
-    "version": "3.5.2"
+    "description": "Twenty Labs AI OS roles and skills (registry 3.6.0)",
+    "version": "3.6.0"
   },
   "plugins": [
     {
@@ -595,6 +595,12 @@
       "source": "./plugins/social",
       "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, or Facebook, or wants to do social listening and engagement triage.",
       "category": "external-skill"
+    },
+    {
+      "name": "store-console",
+      "source": "./plugins/store-console",
+      "description": "Use when an App Store Connect or Play Console chore comes up — submitting a version together with first-time subscriptions, attaching subscriptions or their group to a review, the Play Data safety form, reading Play Console state (managed publishing, changes not sent for review, target audience), or anything that looks like it needs the console in a browser. Checks the asc and Google Play APIs first and drives a browser only where no API exists. NOT for cutting or uploading a build (release-cut), App Store listing copy (aso-ops) or policy review of the app (app-store-compliance).",
+      "category": "skill"
     },
     {
       "name": "subagent-driven-development",
